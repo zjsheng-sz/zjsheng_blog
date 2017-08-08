@@ -1,4 +1,6 @@
 
+
+
 for name in `ls | grep .png`
 do
 

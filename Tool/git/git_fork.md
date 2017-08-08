@@ -15,6 +15,7 @@ fork源仓库 --- fork --- fork仓库副本 ---clone --- 本地仓库
   # 添加fork源仓库的地址
   git remote add upstream ...
 
+ #查看本地仓库关联的远程地址
   git remote -v
 
   # 获取fork源仓库的更新， 实现本地同步

@@ -13,7 +13,7 @@
 2. 检验合法性
 
         pod lib lint
-          pod lib lint --allow-warnings
+        pod lib lint --allow-warnings
 
 3. 添加你的 Podspec 到你的 repo
 

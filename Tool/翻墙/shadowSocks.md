@@ -14,7 +14,7 @@
 	在回车中会提示你输入一个密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。
 	您可以在你本机系统盘下，您的用户文件夹里发现一个.ssh文件，其中的id_rsa.pub文件里储存的即为刚刚生成的ssh密钥。
 
-2. 复制公共钥到网站
+2. 复制公共钥到网站[hostUS服务器](https://my.hostus.us/)
 
 3. $ssh root @ ip ssh登录
 
@@ -38,9 +38,9 @@ pip install shadowsocks
 	[See Install Server on Windows](https://github.com/shadowsocks/shadowsocks/wiki/Install-Shadowsocks-Server-on-Windows)
 
 
-#### Usage
+#### Server
 
-* To run
+* To set password
 ```bash
 $ssserver -p 443 -k password -m aes-256-cfb
 ```
@@ -60,3 +60,7 @@ $sudo ssserver -d stop
 $sudo less /var/log/shadowsocks.log
 #Check all the options via -h. You can also use a Configuration file instead.
 ```
+
+#### Client
+
+ (下载地址)[https://github.com/shadowsocks/ShadowsocksX-NG]
