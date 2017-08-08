@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<car language="en">Eobd</car>
+	<car language="cn">Eobd</car>
+	<car language="es">Eobd</car>
+	<car language="de">Eobd</car>
+	<car language="fr">Eobd</car>
+	<car language="hk">Eobd</car>
+	<car language="ru">Eobd</car>
+	<car language="jp">Eobd</car>
+	<car language="kr">Eobd</car>
+	<car language="pl">Eobd</car>
+	<car language="pt">Eobd</car>
+	<car language="nl">Eobd</car>
+	<car language="it">Eobd</car>
+	<car language="se">Eobd</car>
+	<Enhance_Vehicle>Ford</Enhance_Vehicle>
+	<Enhance_Vehicle>FordChina</Enhance_Vehicle>
+	<Enhance_Vehicle>FordEu</Enhance_Vehicle>
+	<Enhance_Vehicle>FordAu</Enhance_Vehicle>
+	<Enhance_Vehicle>Gm</Enhance_Vehicle>
+	<Enhance_Vehicle>GmChina</Enhance_Vehicle>
+	<Enhance_Vehicle>Chrysler</Enhance_Vehicle>
+	<version>V1.00.16</version>
+	<date>2017.07.22</date>
+</root>
