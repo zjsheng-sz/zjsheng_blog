@@ -1,5 +1,6 @@
+# atom基本使用
 
-# atom快捷方式
+## atom快捷方式
 
 * cmd + t	模糊搜索工作目录下的文件
 * cmt + b	搜索已经打开的文件
@@ -26,16 +27,3 @@
 * ctl + shift + c  复制路径
 * cmd + shift + p  显示所有命令
 * __cmd-L 选取一行，继续按回选取下一行__
-
-### apm的使用
-```bash
-$apm search git-plus
-$apm install git-plus
-#     重新启动atom后OK
-```
-
-### git-control
-
-类似于sourceTree的
-
-Ctrl + Alt + O

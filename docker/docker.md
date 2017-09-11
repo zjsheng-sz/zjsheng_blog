@@ -1,7 +1,7 @@
 
 # docker
 
-- [文档](https://docs.docker.com/)
+- [document](https://docs.docker.com/)
 - [教程](https://yeasy.gitbooks.io/docker_practice/content/introduction/why.html)
 
 
