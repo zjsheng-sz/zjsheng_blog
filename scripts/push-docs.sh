@@ -21,7 +21,7 @@ echo gitbook build
 cp ${BLOG_DIRECTORY}/README.md ${BLOG_DIRECTORY}/README_GITHUB.md
 cp ${BLOG_DIRECTORY}/SUMMARY.md ${BLOG_DIRECTORY}/SUMMARY_GITHUB.md
 
-greed-summary -t "Bell's Blog" -i '[scripts,resource,Resource,Publish,_book,docs,node_modules,assets]' -d  ${BLOG_DIRECTORY} -o  ${BLOG_DIRECTORY}/SUMMARY.md -S gitbook -a
+greed-summary -t "zjsheng's Blog" -i '[scripts,resource,Resource,Publish,_book,docs,node_modules,assets]' -d  ${BLOG_DIRECTORY} -o  ${BLOG_DIRECTORY}/SUMMARY.md -S gitbook -a
 
 cp ${BLOG_DIRECTORY}/SUMMARY.md ${BLOG_DIRECTORY}/README.md
 
