@@ -37,9 +37,9 @@ fi
 echo Deploy to GitHub Pages
 cd ${BLOG_DIRECTORY}/_book
 git init
-git config user.email "bell@greedlab.com"
-git config user.name "Bell"
-git remote add upstream https://greedbell:${GITHUB_API_KEY}@${GITHUB_REF}
+git config user.email "770649662@qq.com"
+git config user.name "zjsrose"
+git remote add upstream https://zjsrose:${GITHUB_API_KEY}@${GITHUB_REF}
 git fetch upstream
 git reset upstream/gh-pages
 git add . --all
