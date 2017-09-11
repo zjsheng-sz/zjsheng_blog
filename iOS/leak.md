@@ -1,5 +1,5 @@
 
-###  xx
+# leak
 
 #### [ios怎么查看内存泄露](https://zhidao.baidu.com/question/136687099497027245.html)
 1. 静态分析，初步了解有无内存泄漏

@@ -1,4 +1,4 @@
-## Effective Objective-C Notes：GCD 实现同步锁
+# Effective Objective-C Notes：GCD 实现同步锁
 
 
 [GCD 实现同步锁](https://www.zybuluo.com/MicroCai/note/64272)

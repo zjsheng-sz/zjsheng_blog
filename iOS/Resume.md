@@ -1,3 +1,6 @@
+
+# resume
+
 iOS开发技能：
 
 1、熟练使用OC，C开发语言，熟悉Swift,Html,javaScript,C++等编程语言

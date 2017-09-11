@@ -1,4 +1,4 @@
-## 制作私有Specs
+# 制作私有Specs
 
 [如何创建私有 CocoaPods 仓库](http://www.jianshu.com/p/ddc2490bff9f)
 

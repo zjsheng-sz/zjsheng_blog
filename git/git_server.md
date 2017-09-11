@@ -1,5 +1,6 @@
 
-## ssh 方式搭建git服务  
+
+# ssh 方式搭建git服务  
 [greed note](https://github.com/greedbell/blog/blob/master/git/git-server.md)
 
 ---

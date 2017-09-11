@@ -1,4 +1,4 @@
-## 多线程
+# 多线程
 
 [五个案例让你明白GCD死锁](http://www.superqq.com/blog/2015/10/16/five-case-know-gcd/)
 

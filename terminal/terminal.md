@@ -1,5 +1,5 @@
 
-## 终端使用初级
+# 终端使用初级
 
 [终端使用初级教程](https://www.renfei.org/blog/mac-os-x-terminal-101.html)
 

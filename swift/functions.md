@@ -1,4 +1,4 @@
-## Swift学习笔记 - function
+# Swift学习笔记 - function
 
 * [Swift 学习指引](http://www.swiftguide.cn/)
 * Swift 文档
