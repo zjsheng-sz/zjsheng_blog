@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title># 17年02月笔记概要 · GitBook</title>
+        <title>根据scott.bonus表，scott.dept表，scott.emp表，scott.salgrade四张表完成如下查询： · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="17年03月笔记概要.html" />
-    
-    
-    <link rel="prev" href="17年01月笔记概要.html" />
     
 
     </head>
@@ -180,9 +176,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="16年11月笔记概要.html">
+        <li class="chapter " data-level="1.4.1" data-path="../Mynote/16年11月笔记概要.html">
             
-                <a href="16年11月笔记概要.html">
+                <a href="../Mynote/16年11月笔记概要.html">
             
                     
                     ## 目录
@@ -193,9 +189,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="16年12月笔记概要.html">
+        <li class="chapter " data-level="1.4.2" data-path="../Mynote/16年12月笔记概要.html">
             
-                <a href="16年12月笔记概要.html">
+                <a href="../Mynote/16年12月笔记概要.html">
             
                     
                     # 16年12月笔记概要
@@ -206,9 +202,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="17年01月笔记概要.html">
+        <li class="chapter " data-level="1.4.3" data-path="../Mynote/17年01月笔记概要.html">
             
-                <a href="17年01月笔记概要.html">
+                <a href="../Mynote/17年01月笔记概要.html">
             
                     
                     # 17年01月笔记概要
@@ -219,9 +215,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.4" data-path="17年02月笔记概要.html">
+        <li class="chapter " data-level="1.4.4" data-path="../Mynote/17年02月笔记概要.html">
             
-                <a href="17年02月笔记概要.html">
+                <a href="../Mynote/17年02月笔记概要.html">
             
                     
                     # 17年02月笔记概要
@@ -232,9 +228,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="17年03月笔记概要.html">
+        <li class="chapter " data-level="1.4.5" data-path="../Mynote/17年03月笔记概要.html">
             
-                <a href="17年03月笔记概要.html">
+                <a href="../Mynote/17年03月笔记概要.html">
             
                     
                     # 17年03月笔记概要
@@ -245,9 +241,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="知识体系一览.html">
+        <li class="chapter " data-level="1.4.6" data-path="../Mynote/知识体系一览.html">
             
-                <a href="知识体系一览.html">
+                <a href="../Mynote/知识体系一览.html">
             
                     
                     ## 基本思路
@@ -975,9 +971,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" data-path="../sql/数据库练习题目.html">
+        <li class="chapter active" data-level="1.14.1" data-path="数据库练习题目.html">
             
-                <a href="../sql/数据库练习题目.html">
+                <a href="数据库练习题目.html">
             
                     
                     根据scott.bonus表，scott.dept表，scott.emp表，scott.salgrade四张表完成如下查询：
@@ -1190,7 +1186,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." ># 17年02月笔记概要</a>
+        <a href=".." >根据scott.bonus表，scott.dept表，scott.emp表，scott.salgrade四张表完成如下查询：</a>
     </h1>
 </div>
 
@@ -1205,18 +1201,264 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="17&#x5E74;02&#x6708;&#x7B14;&#x8BB0;&#x6982;&#x8981;">17&#x5E74;02&#x6708;&#x7B14;&#x8BB0;&#x6982;&#x8981;</h2>
-<h3 id="&#x76EE;&#x5F55;">&#x76EE;&#x5F55;</h3>
+                                <p> &#x6839;&#x636E;scott.bonus&#x8868;&#xFF0C;scott.dept&#x8868;&#xFF0C;scott.emp&#x8868;&#xFF0C;scott.salgrade&#x56DB;&#x5F20;&#x8868;&#x5B8C;&#x6210;&#x5982;&#x4E0B;&#x67E5;&#x8BE2;&#xFF1A;</p>
 <ul>
-<li><a href="#0203">0203 Responder</a></li>
-<li><a href="#0222">0222 &#x6846;&#x67B6;&#x642D;&#x5EFA;</a></li>
+<li><p>&#x663E;&#x793A;&#x90E8;&#x95E8;&#x8868;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x90E8;&#x95E8;&#x540D;&#x79F0;</p>
+<pre><code> select deptno, dname from dept;
+</code></pre></li>
+<li><p>&#x627E;&#x51FA;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x7684;&#x59D3;&#x540D;,&#x5DE5;&#x8D44;&#xFF0C;&#x663E;&#x793A;&#x683C;&#x5F0F;&#x5982;&quot;Amy 1&#x4E2A;&#x6708;&#x7684;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;8000&#x201D;</p>
+<pre><code> select concat(&apos; &#x90E8;&#x95E8;&apos;,dname,&apos;&#x4F4D;&#x4E8E;&apos;,&#x6CE2;&#x58EB;&#x987F;) from dept;
+</code></pre></li>
+<li><p>&#x627E;&#x51FA;&#x6BCF;&#x4E2A;&#x5458;&#x5DE5;&#x7684;&#x59D3;&#x540D;,&#x5DE5;&#x4F5C;&#xFF0C;&#x663E;&#x793A;&#x683C;&#x5F0F;&#x5982;&quot;amy&#x7684;&#x5DE5;&#x4F5C;&#x662F;CLERK&quot;</p>
+</li>
+<li><p>&#x627E;&#x51FA;&#x6BCF;&#x4E2A;&#x90E8;&#x95E8;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x663E;&#x793A;&#x683C;&#x5F0F;&#x5982;&#x201D;&#x90E8;&#x95E8;sales&#x4F4D;&#x4E8E;&#x6CE2;&#x58EB;&#x987F;&quot;</p>
+<pre><code>  select concat(&apos;&#x90E8;&#x95E8;&apos;,dname,&apos;&#x4F4D;&#x4E8E;&apos;,loc) from dept;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#xFF0C;&#x5DE5;&#x4F5C;</p>
+<pre><code> select ename, hiredate,job from emp;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5B57;&#x6BB5;&#x4E00;&#xFF1A;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF1A;&#x522B;&#x540D;&#x4E3A;Name&#xFF0C;&#x663E;&#x793A;&#x5B57;&#x6BB5;&#x4E8C;&#xFF1A;&#x5E74;&#x85AA;,&#x5E74;&#x85AA;=&#x6708;&#x85AA;&#x4E58;&#x4EE5;13&#xFF0C;&#x522B;&#x540D;&#x4E3A;year_sal</p>
+<pre><code> select ename as Name, sal*13 as year_sal from emp;
+</code></pre></li>
 </ul>
-<h3 id="0224">0224</h3>
-<h3 id="0222">0222</h3>
-<p><a href="../iOS/iOS/Responder.md">&#x6846;&#x67B6;&#x642D;&#x5EFA;</a>
-<a href="..">&#x6587;&#x4EF6;&#x4F20;&#x8F93;</a></p>
-<h3 id="0203">0203</h3>
-<p><a href="../iOS/iOS/Responder.md">Responder</a></p>
+<ul>
+<li><p>&#x5C06;&#x5458;&#x5DE5;&#x8868;&#x5148;&#x6309;&#x5DE5;&#x4F5C;&#x964D;&#x5E8F;&#xFF0C;&#x518D;&#x6309;&#x5165;&#x804C;&#x65F6;&#x95F4;&#x5347;&#x5E8F;&#x6392;&#x5E8F;</p>
+<pre><code>   select * from emp order by sal desc, hiredate asc;
+  sqlite&gt; select * from emp order by job desc, hiredate asc;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x5C06;&#x5458;&#x5DE5;&#x8868;&#x6309;&#x85AA;&#x6C34;&#x964D;&#x5E8F;&#x67E5;&#x8BE2;</p>
+<pre><code>   select * from emp order by sal desc;
+</code></pre></li>
+<li><p>&#x5C06;&#x5458;&#x5DE5;&#x8868;&#x6309;&#x90E8;&#x95E8;&#x5347;&#x5E8F;&#xFF0C;&#x85AA;&#x6C34;&#x5347;&#x5E8F;&#x67E5;&#x8BE2;</p>
+<pre><code>   select * from emp order by deptno asc, sal asc;
+</code></pre></li>
+<li><p>&#x5C06;&#x90E8;&#x95E8;&#x8868;&#x6309;&#x6240;&#x5728;&#x5730;&#x5347;&#x5E8F;&#x67E5;&#x8BE2;</p>
+<pre><code>   select * from dept order by loc asc;
+  sqlite&gt; select * from emp order by sal;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x5DE5;&#x8D44;&#x6700;&#x9AD8;&#x7684;1&#x6761;&#x8BB0;&#x5F55;</p>
+<pre><code>  sqlite&gt; select * from emp where sal = (select max(sal) from emp);
+  sqlite&gt; select * from emp order by sal desc limit 1;
+
+   select * from emp where sal = (select max(sal) from emp);
+   select * from emp  order by sal desc limit 1 ;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x8868;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;3&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x504F;&#x79FB;&#x91CF;&#x4ECE;2&#x5F00;&#x59CB;</p>
+<pre><code>  sqlite&gt; select * from emp desc limit 3 offset 2;
+   select * from emp  order by sal desc limit 3 offset 2;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x67E5;&#x8BE2;&#x5DE5;&#x4F5C;&#x4E3A;&#x201D;SALESMAN&quot;&#x7684;&#x5458;&#x5DE5;&#x8BB0;&#x5F55;</p>
+<pre><code>  sqlite&gt; select * from emp where emp.job = &apos;SALESMAN&apos;;
+   select * from emp where job = &apos;salesman&apos;;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&#x4E3A;1600&#x7684;&#x5458;&#x5DE5;&#x8BB0;&#x5F55;</p>
+<pre><code>  sqlite&gt; select * from emp where emp.sal = 1600;
+   select * from emp where sal = 1600;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x5DE5;&#x8D44;&#x5728;2000&#x5230;4000&#x4E4B;&#x95F4;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x5DE5;&#x8D44;</p>
+<pre><code>  sqlite&gt; select * from emp where sal &gt; 2000 and sal &lt; 4000;
+  sqlite&gt; select * from emp where sal between 2000 and 4000;
+   select ename,sal from emp where sal between 2000 and 4000;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x603B;&#x7ECF;&#x7406;&#x7684;&#x59D3;&#x540D;</p>
+<pre><code>   select ename from emp where job = &apos;PRESIDENT&apos;;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x59D3;&#x540D;&#x4E2D;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BCD;&#x4E3A;&#x201D;a&quot;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;</p>
+<pre><code>  sqlite&gt; select * from emp where ename like &apos;__a%&apos;;
+
+   select ename from emp where ename like &apos;__a%&apos;;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x59D3;&#x540D;&#x4E3A;&#x201D;SMITH&quot;&#x6216;&#x4E3A;&quot;KING&quot;&#x7684;&#x5458;&#x5DE5;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#xFF0C;&#x5DE5;&#x4F5C;&#x540D;</p>
+<pre><code>  sqlite&gt; select * from emp where ename in (&apos;SMITH&apos;,&apos;KING&apos;);
+   select ename,hiredate,job from emp where ename in (&apos;SMITH&apos;,&apos;KING&apos;);
+</code></pre></li>
+</ul>
+<ul>
+<li>&#x663E;&#x793A;&#x5DE5;&#x4F5C;&#x540D;&#x79F0;&#x4E2D;&#x5305;&#x542B;&#x201D;MAN&quot;&#x5E76;&#x4E14;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;2000&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x5DE5;&#x4F5C;</li>
+</ul>
+<pre><code>     select ename,job from emp where job like &apos;%man%&apos; and sal &gt; 2000;
+</code></pre><ul>
+<li><p>&#x540D;&#x5B57;&#x4E2D;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x2019;ll&#x2019;&#xFF0C;&#x90E8;&#x95E8;&#x53F7;&#x662F;30&#x53F7;&#xFF0C;&#x6216;&#x7ECF;&#x7406;&#x53F7;&#x4E3A;7782&#x7684;&#x5458;&#x5DE5;</p>
+<pre><code>   select * from emp where ename like &apos;%l%l%&apos; and deptno = &apos;30&apos; or empno = &apos;7782&apos;;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x59D3;&#x540D;&#x4E2D;&#x7B2C;&#x4E09;&#x4E2A;&#x5B57;&#x6BCD;&#x4E3A;&apos;A&apos;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#x3002;&#x6B64;&#x9898;&#x4E0D;&#x53EA;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;</p>
+<pre><code>   select ename from emp where ename like &apos;__a%&apos;;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x59D3;&#x540D;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x4E3A;&#x201D;N&#x201D;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;</p>
+<pre><code>   select ename from emp where ename like &apos;%n&apos;;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x5E94;&#x4EA4;&#x7684;&#x7A0E;&#x91D1;&#xFF1A;&#x5DE5;&#x8D44;1000&#x5143;&#x4EE5;&#x4E0B;&#x4E3A;0&#xFF0C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;1000&#x5E76;&#x5C0F;&#x4E8E;2000&#x4E3A;&#x5DE5;&#x8D44;&#x7684;10%&#xFF0C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;2000&#x5E76;&#x5C0F;&#x4E8E;3000&#x4E3A;&#x5DE5;&#x8D44;&#x7684;15%&#xFF0C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;3000&#x4E3A;&#x5DE5;&#x8D44;&#x7684;20%</p>
+<pre><code>  sqlite&gt; select ename, (case
+     ...&gt; when sal &lt; 1000 then 0
+     ...&gt; when sal between 1000 and 2000  then sal*0.15
+     ...&gt; else sal * 0.15 end
+     ...&gt; ) as tax
+     ...&gt; from emp;
+
+  SELECT  ename,  (CASE
+
+    when sal &lt; 1000 then 0
+    WHEN sal &gt;= 1000 AND  sal &lt; 2000 THEN  sal*0.15
+    else sal * 0.15 end
+
+  ) AS  tax
+    FROM emp;
+</code></pre></li>
+<li><p>&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x5728;&#x6BCF;&#x6708;15&#x65E5;&#x4E4B;&#x540E;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;</p>
+<pre><code>  sqlite&gt; select * from emp where strftime(&apos;%d&apos;,hiredate) &gt; &apos;15&apos;;
+  sqlite&gt; select datetime(&apos;now&apos;,&apos;localtime&apos;);
+  SELECT  * FROM  emp WHERE  day(hiredate) &gt; 15;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x6708;&#x85AA;&#xFF0C;&#x5E74;&#x85AA;&#xFF08;13&#x4E2A;&#x6708;&#x7684;&#x6708;&#x85AA;+10000&#x5143;&#x5956;&#x91D1;+comm&#xFF09;&#x8981;&#x6C42;&#x522B;&#x540D;&#x4E3A;annual_salary,&#x8981;&#x6C42;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x5E74;&#x85AA;&#x90FD;&#x663E;&#x793A;&#x51FA;&#x6765;</p>
+<pre><code>  sqlite&gt; select ename, sal, (sal*13 + 10000 + ifnull(comm,0)) as annual_salary from emp;
+  SELECT  ename, sal, (sal * 13 + 10000 + ifnull(comm,0)) AS annual_salary FROM emp;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x6240;&#x6709;&#x90E8;&#x95E8;&#x5728;&quot;NEW YORK&quot;(dept&#x8868; loc&#x5B57;&#x6BB5;)&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;</p>
+<pre><code>  SELECT emp.ename, dept.loc  FROM emp INNER JOIN dept WHERE emp.deptno = dept.deptno AND dept.loc = &apos;NEW YORK&apos;;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x5305;&#x62EC;&#x90E8;&#x95E8;&#x540D;&#x79F0;&#xFF0C;&#x5458;&#x5DE5;&#x7684;&#x59D3;&#x540D;&#xFF0C;&#x8981;&#x6C42;&#x6240;&#x6709;&#x90E8;&#x95E8;&#x90FD;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x5305;&#x542B;&#x6CA1;&#x6709;&#x5458;&#x5DE5;&#x7684;&#x90E8;&#x95E8;</p>
+<pre><code>  SELECT emp.ename, dept.dname FROM  emp LEFT JOIN dept ON  emp.deptno = dept.deptno;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x201D;SMITH&#x201D;&#x7684;&#x59D3;&#x540D;&#xFF0C;&#x90E8;&#x95E8;&#x540D;&#x79F0;</p>
+<pre><code>   SELECT  emp.ename, dept.dname FROM  emp LEFT JOIN  dept ON emp.deptno = dept.deptno WHERE  emp.ename = &apos;smith&apos;;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&apos;KING&apos;&#x548C;&apos;FORD&apos;&#x7BA1;&#x7406;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#x53CA;&#x5176;&#x7ECF;&#x7406;&#x59D3;&#x540D;</p>
+<pre><code>  SELECT t1.ename staff,t2.ename self,t3.ename manager
+  FROM  (emp t1 LEFT JOIN emp t2 ON t1.mgr = t2.empno) LEFT JOIN emp t3 ON t2.mgr = t3.empno
+  WHERE t2.ename in (&apos;king&apos;, &apos;ford&apos;);
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x5458;&#x5DE5;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#xFF0C;&#x7ECF;&#x7406;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#xFF1A;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x6BD4;&#x4ED6;&#x7684;&#x7ECF;&#x7406;&#x65E9;</p>
+</li>
+</ul>
+<p>-- t1 &#x5458;&#x5DE5;&#x8868;, t2 &#x7ECF;&#x7406;&#x8868;
+        SELECT t1.ename AS staff_name, t1.hiredate AS staff_hiredate, t2.ename AS  manager_name, t2.hiredate AS manager_hiredate
+        FROM emp t1 INNER JOIN emp t2 ON t1.mgr = t2.empno
+        WHERE t1.hiredate &lt; t2.hiredate;</p>
+<ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5DE5;&#x4F5C;&#x540D;&#x79F0;(job)&#x4E2D;&#x5305;&#x542B;&#x201D;MAN&#x201D;&#x7684;&#x5458;&#x5DE5;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#xFF0C;&#x6700;&#x9AD8;&#x5DE5;&#x8D44;&#xFF0C;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x53CA;&#x5DE5;&#x8D44;&#x7684;&#x548C;</p>
+<pre><code>  SELECT count(*), avg(sal),max(sal),min(sal),sum(sal) FROM  emp WHERE job LIKE &apos;%man%&apos;;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x51FA;20&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4EBA;&#x6570;</p>
+<pre><code>  SELECT count(*) FROM emp INNER JOIN dept ON emp.deptno = dept.deptno WHERE dept.deptno = 20;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;2000&#x7684;&#x90E8;&#x95E8;&#x540D;&#x79F0;&#x53CA;&#x5E73;&#x5747;&#x5DE5;&#x8D44;</p>
+<pre><code>  SELECT  dept.dname, avg(sal) FROM emp INNER JOIN dept ON emp.deptno = dept.deptno GROUP BY dept.deptno HAVING avg(sal) &gt; 2000;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x6BCF;&#x4E2A;&#x90E8;&#x95E8;&#x6BCF;&#x79CD;&#x5DE5;&#x4F5C;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;2500&#x7684;&#x90E8;&#x95E8;&#x53CA;&#x5DE5;&#x4F5C;</p>
+<pre><code>  SELECT emp.job,dept.dname,avg(sal)
+  FROM emp INNER JOIN dept ON emp.deptno = dept.deptno
+  GROUP BY emp.deptno,emp.job HAVING avg(sal) &gt; 2500;
+  ;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5DE5;&#x4F5C;&#x540D;&#x79F0;&#x4E2D;&#x5305;&#x542B;&quot;MAN&quot;&#xFF0C;&#x5E76;&#x4E14;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;1000&#x7684;&#x5DE5;&#x4F5C;&#x540D;&#x79F0;&#x53CA;&#x5E73;&#x5747;&#x5DE5;&#x8D44;</p>
+<pre><code>  SELECT emp.job, avg(sal)
+  FROM emp GROUP BY emp.job
+  HAVING avg(sal) &gt; 1000 AND emp.job LIKE &apos;%man%&apos;;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x6700;&#x9AD8;&#x7684;&#x7684;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;</p>
+<pre><code>  select avg(sal) from emp group by deptno order by avg(sal) desc limit 1;
+</code></pre></li>
+<li><p>&#x5217;&#x51FA;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;1500&#x7684;&#x5404;&#x79CD;&#x5DE5;&#x4F5C;</p>
+<pre><code>  SELECT emp.job, min(sal) AS job_minSalary FROM emp GROUP BY job HAVING min(sal) &gt; 1500;
+</code></pre></li>
+</ul>
+<ul>
+<li><p>&#x5217;&#x51FA;&#x5404;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x6570;&#x91CF;&#x53CA;&#x5E73;&#x5747;&#x5DE5;&#x4F5C;&#x5E74;&#x9650;(&#x628A;&#x6708;&#x4EFD;&#x6C42;&#x51FA;&#x6765;)</p>
+<pre><code>  SELECT  count(*) AS emp_count, avg(timestampdiff(MONTH,emp.hiredate,now())) AS ave_firedate
+  FROM  emp GROUP BY emp.deptno;
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x548C;&#x5458;&#x5DE5;&#x53F7;7369&#x90E8;&#x95E8;&#x76F8;&#x540C;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x5DE5;&#x8D44;</p>
+<pre><code>  SELECT  t1.ename AS emp_name, t1.sal AS emp_salary
+  FROM emp t1
+  WHERE t1.deptno = (SELECT t2.deptno FROM emp t2 WHERE t2.empno = 7369);
+</code></pre></li>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x548C;&#x59D3;&#x540D;&#x4E2D;&#x5305;&#x542B;&quot;W&quot;&#x7684;&#x5458;&#x5DE5;&#x76F8;&#x540C;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;</p>
+<pre><code>  SELECT t1.ename, t1.deptno
+
+  FROM  emp t1
+
+  WHERE t1.deptno IN (SELECT t2.deptno FROM  emp t2 WHERE t2.ename LIKE &apos;%w%&apos;);
+</code></pre></li>
+</ul>
+<ul>
+<li>&#x663E;&#x793A;&#x51FA;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x5DE5;&#x8D44;</li>
+</ul>
+<pre><code>    SELECT t1.ename, t1.sal
+    FROM emp t1
+    WHERE t1.sal &gt;  (select avg(sal) from emp);
+</code></pre><ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5DE5;&#x8D44;&#x5927;&#x4E8E;&#x672C;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x5DE5;&#x8D44;</p>
+<pre><code>  SELECT t1.ename, t1.sal, t1.deptno
+  FROM emp t1
+  WHERE t1.sal &gt; (SELECT avg(t2.sal) FROM emp t2 GROUP BY t2.deptno HAVING t1.deptno = t2.deptno);
+</code></pre></li>
+</ul>
+<ul>
+<li>&#x663E;&#x793A;&#x5458;&#x5DE5;&quot;KING&quot;&#x6240;&#x7BA1;&#x7406;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;<pre><code>  ELECT t1.ename AS self_name, t2.ename AS staff_name
+  FROM emp t1 INNER JOIN emp t2 ON t2.mgr = t1.empno
+  WHERE t1.ename = &apos;king&apos;;
+</code></pre></li>
+</ul>
+<ul>
+<li>&#x663E;&#x793A;&#x6BD4;&#x5DE5;&#x8D44;&#x6700;&#x9AD8;&#x7684;&#x5458;&#x5DE5;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x665A;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF0C;&#x53C2;&#x52A0;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;</li>
+</ul>
+<p>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;
+        SELECT t1.ename, t1.hiredate</p>
+<pre><code>    FROM emp t1
+
+    WHERE t1.hiredate &gt; (SELECT  t2.hiredate FROM  emp t2  ORDER BY t2.sal DESC  LIMIT 1);
+</code></pre><p>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;</p>
+<pre><code>    SELECT t1.ename, t1.hiredate
+
+    FROM emp t1
+
+    WHERE t1.hiredate &gt; (SELECT  t2.hiredate FROM  emp t2 WHERE t2.sal = (SELECT max(sal) FROM emp));
+</code></pre><ul>
+<li><p>&#x663E;&#x793A;&#x51FA;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x6700;&#x9AD8;&#x7684;&#x7684;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x53CA;&#x90E8;&#x95E8;&#x540D;&#x79F0;</p>
+<pre><code>  SELECT t2.avg_salary, t3.dname
+  FROM (SELECT avg(t1.sal) AS avg_salary, t1.deptno
+            FROM  emp t1 GROUP BY t1.deptno ORDER BY avg(t1.sal) DESC LIMIT 1) t2
+            LEFT JOIN dept t3 ON t2.deptno = t3.deptno;
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x5DE5;&#x8D44;&#x6700;&#x9AD8;&#x7684;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#x548C;&#x5DE5;&#x8D44;&#x3002;</p>
+<pre><code>  SELECT t1.ename, t1.sal
+  FROM emp t1
+  WHERE t1.sal = (SELECT max(sal) FROM emp);
+</code></pre></li>
+<li><p>&#x67E5;&#x8BE2;&#x90E8;&#x95E8;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x9AD8;&#x4E8E;40&#x53F7;&#x90E8;&#x95E8;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x7684;&#x90E8;&#x95E8;&#x7684;&#x7F16;&#x53F7;&#x3001;
+&#x540D;&#x79F0;&#x53CA;&#x90E8;&#x95E8;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x3002;</p>
+</li>
+<li>&#x67E5;&#x8BE2;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x4E3A;&#x5176;&#x90E8;&#x95E8;&#x6700;&#x4F4E;&#x5DE5;&#x8D44;&#x7684;&#x5458;&#x5DE5;&#x7684;&#x7F16;&#x53F7;&#x548C;&#x59D3;&#x540D;
+&#x53CA;&#x5DE5;&#x8D44;&#x3002;</li>
+<li>&#x663E;&#x793A;&#x51FA;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x6392;&#x5728;&#x7B2C;&#x4E94;&#x5230;&#x7B2C;&#x5341;&#x540D;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;</li>
+<li>&#x8868;copy_emp&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x8981;&#x6C42;emp&#x8868;&#x4E2D;&#x90E8;&#x95E8;&#x53F7;&#x4E3A;10&#x53F7;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x63D2;&#x5165;</li>
+<li>&#x4FEE;&#x6539;copy_emp&#x8868;&#x4E2D;&#x6570;&#x636E;&#xFF0C;&#x8981;&#x6C42;10&#x53F7;&#x90E8;&#x95E8;&#x6240;&#x6709;&#x5458;&#x5DE5;&#x6DA8;20%&#x7684;&#x5DE5;&#x8D44;</li>
+<li>&#x521B;&#x5EFA;&#x89C6;&#x56FE;&#xFF0C;&#x8981;&#x6C42;&#x5305;&#x542B;&#x5B57;&#x6BB5;&#xFF1A;&#x90E8;&#x95E8;&#x540D;&#xFF0C;&#x90E8;&#x95E8;&#x5E73;&#x5747;&#x5DE5;&#x8D44;&#x3002;&#x9488;&#x5BF9;&#x4EE5;&#x4E0A;&#x89C6;&#x56FE;&#x6267;&#x884C;insert,update,delete,&#x8BED;&#x53E5;&#x80FD;&#x5426;&#x6210;&#x529F;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#xFF1F;</li>
+</ul>
 
                                 
                                 </section>
@@ -1244,14 +1486,6 @@
 
             
                 
-                <a href="17年01月笔记概要.html" class="navigation navigation-prev " aria-label="Previous page: # 17年01月笔记概要">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="17年03月笔记概要.html" class="navigation navigation-next " aria-label="Next page: # 17年03月笔记概要">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1260,7 +1494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"# 17年02月笔记概要","level":"1.4.4","depth":2,"next":{"title":"# 17年03月笔记概要","level":"1.4.5","depth":2,"path":"Mynote/17年03月笔记概要.md","ref":"Mynote/17年03月笔记概要.md","articles":[]},"previous":{"title":"# 17年01月笔记概要","level":"1.4.3","depth":2,"path":"Mynote/17年01月笔记概要.md","ref":"Mynote/17年01月笔记概要.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Mynote/17年02月笔记概要.md","mtime":"2017-09-11T03:36:59.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-11T03:38:45.383Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"根据scott.bonus表，scott.dept表，scott.emp表，scott.salgrade四张表完成如下查询：","level":"1.14.1","depth":2,"next":{"title":"swift","level":"1.15","depth":1,"ref":"","articles":[{"title":"# Swift学习笔记 -Initialization","level":"1.15.1","depth":2,"path":"swift/Initialization.md","ref":"swift/Initialization.md","articles":[]},{"title":"# Swift学习笔记 -Mix and Match Overview","level":"1.15.2","depth":2,"path":"swift/Mix and Match Overview.md","ref":"swift/Mix and Match Overview.md","articles":[]},{"title":"## Swift学习笔记 - 访问权限","level":"1.15.3","depth":2,"path":"swift/access control.md","ref":"swift/access control.md","articles":[]},{"title":"# Swift学习笔记 - function","level":"1.15.4","depth":2,"path":"swift/functions.md","ref":"swift/functions.md","articles":[]}]},"previous":{"title":"sql","level":"1.14","depth":1,"ref":"","articles":[{"title":"根据scott.bonus表，scott.dept表，scott.emp表，scott.salgrade四张表完成如下查询：","level":"1.14.1","depth":2,"path":"sql/数据库练习题目.md","ref":"sql/数据库练习题目.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"sql/数据库练习题目.md","mtime":"2017-09-11T03:36:59.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-11T03:38:45.383Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
