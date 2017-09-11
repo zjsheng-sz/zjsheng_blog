@@ -5,7 +5,7 @@
 * brew
     * [brew](/brew/brew.md)
 * CI
-    * [Travis](/CI/Travis CI.md)
+    * [Travis](/CI/Travis.md)
 * docker
     * [docker](/docker/docker.md)
 * git
@@ -68,7 +68,7 @@
     * [Swift学习笔记 - 访问权限](/swift/access control.md)
     * [Swift学习笔记 - function](/swift/functions.md)
     * [Swift学习笔记 -Initialization](/swift/Initialization.md)
-    * [Swift学习笔记 -Mix and Match Overview](/swift/Mix and Match Overview.md)
+    * [Swift学习笔记 -Mix and Match Overview](/swift/MixAndMatchOverview.md)
 * terminal
     * [终端使用初级](/terminal/terminal.md)
 * xcode
