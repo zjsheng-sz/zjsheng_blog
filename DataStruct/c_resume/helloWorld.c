@@ -1,21 +1,23 @@
 #include <stdio.h>
-#define N 10
 
 int main(){
 
 
-    int a[N], i;
+    int a[10] = {0}, i;
 
-    printf("Enter %d numbers: ",N);
+    printf("Enter 10 numbers: ");
 
-    for(i = 0; i < N; i++){
-    	
-	scanf("%d", &a[i]);
-    	
+    for(i = 0; i < 10; i++){
+
+	  scanf("%d", &a[i]);
+
     }
 
-    for (i = N - 1; i >= 0; i--)
-	printf(" %d", a[i]);
+    for(i = 0; i < 10; i++){
+
+      printf(" %d\n", a[i]);
+
+    }
 
     return 0;
 }

@@ -6,7 +6,7 @@ markdown 文件提交到 GitHub
 
 ## dependences.sh
 
-安装发布需要的依赖
+安装发布需要的依赖: gitbook, greed-summary
 
 ## build.sh
 
