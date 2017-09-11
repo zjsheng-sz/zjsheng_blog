@@ -1,4 +1,5 @@
-## shadowsocks翻墙教程
+
+# shadowsocks
 
 [hostUS服务器](https://my.hostus.us/)
 
