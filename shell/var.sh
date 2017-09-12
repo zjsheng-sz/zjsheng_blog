@@ -1,24 +1,18 @@
 #!/bin/bash
 
 your_name="zjs"
-echo $your_name
+echo "your_name = $your_name"
 
 #只读变量 不能被改变 不能被删除
-
 myUrl="http://www.w3cschool.cc"
-#readonly myUrl
-#myUrl="http://www.runoob.com"
+readonly myUrl
 unset myUrl
-echo $myUrl
+echo "myurl = ${myUrl}"
 
-
-##########字符串#########"
-#Shell 字符串
 #单引号 原样输出，变量无效
 str='this is a string'
 
 #双引号 可以有变量，可以出现转义字符
-
 your_name='zhongjs'
 str="Hello, I know you are \"$your_name\"! \n"
 
@@ -40,9 +34,6 @@ echo ${string:1:4}
 strings="runoob is a great company"
 #echo `expr index "$strings" r`
 
-
-#########数组###########"
-
 #定义数组
 array_name=(value0 value1 value2 value3)
 array_name=(value00
@@ -54,6 +45,7 @@ array_name=(value00
 #数组赋值
 array_name[0]=value000;
 array_name[1]=value111;
+
 #读取数组
 valuen=${array_name[1]}
 echo ${array_name[@]}
@@ -62,5 +54,3 @@ length=${#array_name[@]}
 length=${#array_name[*]}
 #取得数组单个元素的长度
 length=${#array_name[n]}
-
-
