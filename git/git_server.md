@@ -18,8 +18,6 @@
 
         $ su - git
         $ git init --bare --shared=group /git/test.git
-
-
 ---
 > 客户端
 

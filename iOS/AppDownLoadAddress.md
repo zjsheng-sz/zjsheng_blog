@@ -5,4 +5,4 @@
 
 ## appInfo
 
-[MaxiAp app信息获取地址](http://itunes.apple.com/lookup?id=1247339344)
+[MaxiAp app信息获取地址](http://itunes.apple.com/us/lookup?bundleId=com.autel.MaxiAP)
