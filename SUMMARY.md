@@ -6,6 +6,7 @@
 * brew
     * [brew](/brew/brew.md)
 * C
+    * [表、栈、堆](/C/数据结构和算法分析1.md)
 * CI
     * [Travis](/CI/Travis.md)
 * docker
@@ -64,8 +65,8 @@
     * [cocoapods的安装与使用](/Pod/cocoaPods.md)
     * [制作自己的pod](/Pod/cocoaPods_trunk.md)
     * [制作私有Specs](/Pod/privateSpecs.md)
-* regex
-    * [Regex](/regex/Regex.md)
+    * regex
+        * [Regex](/Pod/regex/Regex.md)
 * shell
 * sql
     * [数据库练习题目](/sql/数据库练习题目.md)
@@ -80,3 +81,4 @@
     * [shadowsocks](/unblock/shadowSocks.md)
 * xcode
     * [Xcode中常用的快捷键操作](/xcode/xcode.md)
+* [1. 名称： XXXX](/方案.md)
