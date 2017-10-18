@@ -18,8 +18,3 @@ iOS开发技能：
 13. 熟练使用CoreAnimation
 14. 能熟练阅读英文技术资料
 15. 各种工具: git、docker、gitlab、pod、CI、atom、brew、makedown、regex
-
-
-
-//5个月的时间，足够我变得足够优秀。
-10.18 - 3.18
