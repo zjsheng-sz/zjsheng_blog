@@ -13,6 +13,7 @@
   * `git config --global user.email email@example.com`   
   * `--global`参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址
 
+  [查看config配置信息] https://www.cnblogs.com/merray/p/6006411.html
 
 * 创建版本库
   *  初始化一个Git仓库，使用`git init`命令。  
