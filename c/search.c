@@ -1,10 +1,6 @@
 #include<stdio.h>
 
-
-
 int main(){
-	
-    printf("");
-	
+    printf("123");
     return 0;
 }
