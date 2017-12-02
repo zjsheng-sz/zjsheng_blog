@@ -44,6 +44,7 @@ xcodebuild -target "${TARGET_NAME}" -sdk iphonesimulator \
 -configuration "$CONFIGURATION_TARGET"
 
 
+
 echo "~~~~~~~~~~~~~~~~判断是否编译成功~~~~~~~~~~~~~~~~~~~"
 
 if [ -f "${FRAMEWORK_FILE_IPHONE}/${TARGET_NAME}" ]; then

@@ -41,7 +41,7 @@ typedef struct{
 int main(){
 
 	Part part3 = {123,"robert",1};
-	printf("part1 number:%d\n",part3.number);		
-	
+	printf("part1 number:%d\n",part3.number);
+
 	return 0;
 }
