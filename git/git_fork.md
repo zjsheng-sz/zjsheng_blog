@@ -5,7 +5,7 @@
 
 ### fork源仓库
 
-fork源仓库 --- fork --- fork仓库副本 ---clone --- 本地仓库
+源仓库 --- fork --- fork仓库副本 ---clone --- 本地仓库
 
 ### fork仓库副本和local仓库的同步
 

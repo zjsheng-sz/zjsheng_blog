@@ -10,7 +10,7 @@
 
 ## 配置环境变量
 
-## 编辑.travis.yml  
+## 编辑.travis.yml
 
 ```
 before_install:

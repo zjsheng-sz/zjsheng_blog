@@ -13,7 +13,6 @@
 * delete / a / m /d	对目录选中的结点进行 删除 / 添加 / 移动 ／复制
 * cmd + f	搜索 当前文件
 * cmd + shift + f	搜索 目录
-* __cmd + shift + r	搜索 tag 前提是安装ctags (brew install ctags)且生成tags (ctags -R src/)__
 * alt + cmd + [收起 所在代码块
 * alt + cmd + ]	展开 所在代码块
 * alt + cmd + shift + [	收起 当前所有代码块
@@ -24,6 +23,6 @@
 * cmd + w	关闭当前工作面板
 * cmd + shift + w 关闭当前窗口
 * alt + cmd + 左右	切换tab文件选项卡
-* ctl + shift + c  复制路径
+* __ctl + shift + c  复制路径__
 * cmd + shift + p  显示所有命令
 * __cmd-L 选取一行，继续按回选取下一行__

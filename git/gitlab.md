@@ -37,7 +37,6 @@
 
   ![](Source/ssh_creat.png)
 
-
 > 拷贝  
 
   密钥生成成功！密钥分成两个文件，一个私钥（id_rsa）、一个公钥（id_rsa.pub）。私钥保存在你的电脑上，公钥添加到服务器上。用户必须拥有与服务器公钥所配对的私钥，才能访问服务器上的代码库。
@@ -50,7 +49,6 @@
   更新:`git pull`  
   提交:`git add .`, `git commit -m"update"`, `git push origin master`  
   详情见[git使用说明](git使用说明.md)
-
 
 ### 使用makedown编辑
 

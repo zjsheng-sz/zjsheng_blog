@@ -6,7 +6,6 @@
 * brew
     * [brew](/brew/brew.md)
 * C
-    * [表、栈、堆](/C/数据结构和算法分析1.md)
 * CI
     * [Travis](/CI/Travis.md)
 * docker
@@ -14,7 +13,8 @@
     * [gitlab](/docker/gitlab.md)
     * [wordpress](/docker/wordpress.md)
 * ForJob
-    * [12月的内容：](/ForJob/17.12月plan.md)
+    * [## 新年计划：](/ForJob/new_year_plan.md)
+    * [playplan](/ForJob/playplan.md)
     * [resume](/ForJob/Resume.md)
 * git
     * [git_basic](/git/git_basic.md)
@@ -25,6 +25,7 @@
     * [gitPage](/git/gitpages.md)
     * Source
 * iOS
+    * [AFNetWorking](/iOS/AFNetWorking.md)
     * [AppDownLoadAddress](/iOS/AppDownLoadAddress.md)
     * [blueTooth](/iOS/blueTooth.md)
     * [webview清除缓存](/iOS/CacheOfWebView.md)
