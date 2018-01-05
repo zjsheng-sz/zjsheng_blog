@@ -11,6 +11,6 @@ So, 从现在开始，我找到了我前进的方向，我要用尽自己的全�
 
 复习要有针对性的复习，不能再是泛泛的复习了。So， 行动吧
 
-objectC: Programming with Objective-C - v1.0
+objectC: Programming with Objective-C
+swift：The Swift Programming Language
 支付：
-蓝牙：
