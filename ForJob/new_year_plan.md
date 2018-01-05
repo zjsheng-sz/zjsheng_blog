@@ -7,7 +7,10 @@ So, 从现在开始，我找到了我前进的方向，我要用尽自己的全�
 2. 我的第二项学识应该是：完美的iOS开发技能
 3. 我的第三项学识应该是：无与伦比的羽毛球技术
 
-* atom、 brew、 C、 CI、 docker、 git 、makedown 、Pod、shell、sql、terminal、unblock、xcode
-* iOS、mynote、objectC、swift
+#### 0105
 
-#### 12.28
+复习要有针对性的复习，不能再是泛泛的复习了。So， 行动吧
+
+objectC: Programming with Objective-C - v1.0
+支付：
+蓝牙：

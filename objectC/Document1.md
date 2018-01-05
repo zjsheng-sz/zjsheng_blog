@@ -3,59 +3,58 @@
 
 * [文档](https://developer.apple.com/library/prerelease/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011210)
 
-[命名规则](#命名规则)  
+[Conventions](#Conventions)  
 [Values and Collections](#Values and Collections)  
 [Working with Protocols](#Working with Protocols)  
 [Customizing Existing Classes](#Customizing Existing Classes)  
 [Encapsulating Data](#Encapsulating Data)  
 
-## 命名规则
+------------------------------------------------------------------------------
 
-### 一些名称必须在程序中唯一
+## Conventions
 
-  类名应在程序中唯一
+### Some Names Must Be Unique Across Your App
 
-      在命名类时使用前缀命名可以保证类名唯一
+#### Class Names Must Be Unique Across an Entire App
 
-  类中的方法名应具描述性且唯一
+  In order to keep class names unique, the convention is to use prefixes on all classes.
 
-      方法名的第一部分提示方法的主要作用或提示方法调用后的结果
+#### Method Names Should Be Expressive and Unique Within a Class
 
-  在框架类的 Categories 中使用前缀命名方法
+  The first portion of the method name should indicate the primary intent or result of calling the method.
 
-      当使用 Category 来创建方法到一个已经存在的框架类时，你需要在方法名中使用前缀来避免冲突。
+#### Always Use a Prefix for Method Names in Categories on Framework Classes
 
-### 同一区域内局部变量名必须唯一
+  When using a category to add methods to an existing framework class, you should include a prefix on the method name to avoid clashes
 
----
+------------------------------------------------------------------------------
 
 ##  Values and Collections
 
-### 你可以使用C中的基本数据类型
+### Basic C Primitive Types Are Available in Objective-C
 
-    像 NSInteger 和 NSUInteger 这样的类型，在不同的系统结构中有不同的定义方式。当为 32 位运行环境(例如 IOS)编程时，他们分别是 32 位的有符号整数和无符号整数;当为 64 位运行环境(例如 modern OS X runti me)编程时，他们分别是 64 位的有符号整数和无符号整数
+  These types, like NSInteger and NSUInteger, are defined differently depending on the target architecture. When building for a 32-bit environment (such as for iOS), they are 32-bit signed and unsigned integers respectively; when building for a 64-bit environment (such as for the modern OS X runtime) they are 64-bit signed and unsigned integers respectively.
 
-### 对象可以表示基本数值
-    通过NSString类的实例表示Strings
+### Objects Can Represent Primitive Values
 
-    通过NSNumber类的实例表示数字
+  Strings Are Represented by Instances of the NSString Class
 
-    使用NSValue类的实例表示其他值
+  Numbers Are Represented by Instances of the NSNumber Class
 
-### 大多数集合都是对象
+  Represent Other Values Using Instances of the NSValue Class
 
-    数组是有序的集合
-    无序集合:Sets
-    字典是一种存储键值对的集合
-    使用NSNull代替nil
+### Most Collections Are Objects
 
-### 使用集合来保存对象的图形
+    Arrays Are Ordered Collections
+    Sets Are Unordered Collections
+    Dictionaries Collect Key-Value Pairs
+    Represent nil with NSNull
 
-### 使用最有效的集合列举技术
+### Use Collections to Persist Your Object Graph
 
+### Use the Most Efficient Collection Enumeration Techniques
 
----
-
+----------------------------------------------------------------------------
 
 ## Working with Protocols
 
@@ -65,18 +64,17 @@
 
 ```objc
 
-  @protocol XYZPieChartViewDataSource
-  - (NSUInteger)numberOfSegments;
-  - (CGFloat)sizeOfSegmentAtIndex:(NSUInteger)segmentIndex;
-  @optional
-  - (NSString *)titleForSegmentAtIndex:(NSUInteger)segmentIndex;
-  - (BOOL)shouldExplodeSegmentAtIndex:(NSUInteger)segmentIndex;
-  @required
-  - (UIColor *)colorForSegmentAtIndex:(NSUInteger)segmentIndex;
-  @end
+      @protocol XYZPieChartViewDataSource
+      - (NSUInteger)numberOfSegments;
+      - (CGFloat)sizeOfSegmentAtIndex:(NSUInteger)segmentIndex;
+      @optional
+      - (NSString \*)titleForSegmentAtIndex:(NSUInteger)segmentIndex;
+      - (BOOL)shouldExplodeSegmentAtIndex:(NSUInteger)segmentIndex;
+      @required
+      - (UIColor \*)colorForSegmentAtIndex:(NSUInteger)segmentIndex;
+      @end
 
-  //This example defines a protocol with three required methods and two optional methods.
-
+      //This example defines a protocol with three required methods and two optional methods.
 ```
 
   If a method in a protocol is marked as optional, you must check whether an object implements that method before attempting to call it.
@@ -93,16 +91,15 @@
 
 ```objc
 
-id <XYZFrameworkUtility> utility = [frameworkObject anonymousUtility];
+        id <XYZFrameworkUtility> utility = [frameworkObject anonymousUtility];
 
-id <NSFetchedResultsSectionInfo> sectionInfo =
-[self.fetchedResultsController.sections objectAtIndex:sectionNumber];
+        id <NSFetchedResultsSectionInfo> sectionInfo =
+        [self.fetchedResultsController.sections objectAtIndex:sectionNumber];
 
-NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
-
+        NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
 ```
 
----
+----------------------------------------------------------------------------
 
 ## Customizing Existing Classes
 
@@ -133,7 +130,7 @@ NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
 ### Consider Other Alternatives for Class Customization
 
 
----
+------------------------------------------------------------------------------
 
 
 ## Encapsulating Data
@@ -154,7 +151,8 @@ NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
 
   In general, you should use accessor methods or dot syntax for property access even if you’re accessing an object’s properties from within its own implementation, in which case you should use self:
 
-  ```object
+```object
+
   - (void)someMethod {
       NSString *myString = @"An interesting string";
 
@@ -163,11 +161,12 @@ NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
       [self setSomeString:myString];
   }
 
-  ```
+```
   The exception to this rule is when writing initialization, deallocation or custom accessor methods
 
   >You Can Customize Synthesized Instance Variable Names
-  ```object
+
+```object
   /*
   In this case, the property will still be called firstName, and be accessible through firstName and setFirstName: accessor methods or dot syntax, but it will be backed by an instance variable called ivar_firstName.
   */
@@ -176,7 +175,7 @@ NSInteger numberOfRowsInSection = [sectionInfo numberOfObjects];
   /*the instance variable will bear the same name as the property.*/
 
   @synthesize firstName;
-  ```
+```
 
   >You Can Define Instance Variables without Properties
 
