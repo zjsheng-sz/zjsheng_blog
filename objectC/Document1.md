@@ -132,7 +132,6 @@
 
 ------------------------------------------------------------------------------
 
-
 ## Encapsulating Data
 
 ### Properties Encapsulate an Object’s Values
@@ -206,6 +205,12 @@
 #### Properties Are Atomic by Default
 
  Because the internal implementation and synchronization of atomic accessor methods is private, it’s not possible to combine a synthesized accessor with an accessor method that you implement yourself. You’ll get a compiler warning if you try, for example, to provide a custom setter for an atomic, readwrite property but leave the compiler to synthesize the getter.
+
+ Note: Property atomicity is not synonymous with an object’s thread safety.
+
+ Consider an XYZPerson object in which both a person’s first and last names are changed using atomic accessors from one thread. If another thread accesses both names at the same time, the atomic getter methods will return complete strings (without crashing), but there’s no guarantee that those values will be the right names relative to each other. If the first name is accessed before the change, but the last name is accessed after the change, you’ll end up with an inconsistent, mismatched pair of names.
+
+ This example is quite simple, but the problem of thread safety becomes much more complex when considered across a network of related objects. Thread safety is covered in more detail in Concurrency Programming Guide.
 
 
 #### Manage the Object Graph through Ownership and Responsibility

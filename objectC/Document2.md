@@ -1,18 +1,116 @@
 #ObjectC文档2
 
-* [文档](https://developer.apple.com/library/prerelease/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011210)
+  * [文档](https://developer.apple.com/library/prerelease/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html#//apple_ref/doc/uid/TP40011210)
 
 
 [Defining Classes](#Defining Classes)  
 [Objects Send and Receive Messages](#Objects Send and Receive Messages)  
 
+
+## Working with Blocks
+
+### Block Syntax
+
+The syntax to define a block literal uses the caret symbol (^), like this:
+
+```objc
+
+    void (^simpleBlock)(void);
+
+    ^{
+         NSLog(@"This is a block");
+    }
+
+    simpleBlock = ^{
+        NSLog(@"This is a block");
+    };
+
+    void (^simpleBlock)(void) = ^{
+        NSLog(@"This is a block");
+    };
+
+
+    //Blocks Take Arguments and Return Values
+
+    double (^multiplyTwoValues)(double, double);
+
+    ^ (double firstValue, double secondValue) {
+      return firstValue * secondValue;
+    }
+
+    double (^multiplyTwoValues)(double, double) =
+                              ^(double firstValue, double secondValue) {
+                                  return firstValue * secondValue;
+                              };
+
+
+
+```
+
+#### Blocks Can Capture Values from the Enclosing Scope
+
+   Use \__block Variables to Share Storage
+
+#### You Can Pass Blocks as Arguments to Methods or Functions
+
+#### Use Type Definitions to Simplify Block Syntax
+
+```objc
+
+    typedef void (^XYZSimpleBlock)(void);
+```
+
+
+#### Objects Use Properties to Keep Track of Blocks
+
+```objc
+    @interface XYZObject : NSObject
+    @property (copy) void (^blockProperty)(void);
+    @end
+```
+
+#### Avoid Strong Reference Cycles when Capturing self
+
+```objc
+
+- (void)configureBlock {
+    XYZBlockKeeper * \__weak weakSelf = self;
+    self.block = ^{
+        [weakSelf doSomething];   // capture the weak reference
+                                  // to avoid the reference cycle
+    }
+}
+
+```
+
+### Blocks Can Simplify Enumeration
+
+### Blocks Can Simplify Concurrent Tasks
+
+```objc
+
+  NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
+
+  NSBlockOperation *blockOperation = [NSBlockOperation blockOperationWithBlock:^{
+      <#code#>
+  }];
+
+  [mainQueue addOperation:blockOperation];
+
+```
+
+---
+
 ## Defining Classes
 
+略
 
 
 ---
 
-## Objects Send and Receive Messages
+## Working with Objects
+
+### Objects Send and Receive Messages
 
 someObject will be sent the doSomething message.
 
@@ -26,7 +124,7 @@ someObject will be sent the doSomething message.
 
 > Objects Can Call Methods Implemented by Their Superclasses
 
-## Objects Are Created Dynamically
+### Objects Are Created Dynamically
 
 Notice that the return type of this method is `id`. This is a special keyword used in Objective-C to mean “some kind of object.”
 
@@ -35,7 +133,7 @@ The `alloc` method has one other important task, which is to clear out the memor
 The `init` method is used by a class to make sure its properties have suitable initial values at creation, and is covered in more detail in the next chapter.
 
 
-## Objective-C Is a Dynamic Language
+### Objective-C Is a Dynamic Language
 
 As mentioned earlier, you need to use a pointer to keep track of an object in memory. Because of Objective-C’s dynamic nature, it doesn’t matter what specific class type you use for that pointer—the correct method will always be called on the relevant object when you send it a message.
 

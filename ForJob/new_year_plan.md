@@ -11,6 +11,11 @@ So, 从现在开始，我找到了我前进的方向，我要用尽自己的全�
 
 复习要有针对性的复习，不能再是泛泛的复习了。So， 行动吧
 
-objectC: Programming with Objective-C
+objectC: Programming with Objective-C    OK
+runtime                                  OK
+runloop                                  Ok
+多线程                                    OK
+锁、信号量、死锁
+动画
+支付
 swift：The Swift Programming Language
-支付：

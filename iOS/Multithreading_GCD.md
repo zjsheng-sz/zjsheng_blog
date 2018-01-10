@@ -21,7 +21,6 @@
 
 ### GCD API
 > 系统标准提供的两个队列
-
 ```objc
 // 全局队列，也是一个并行队列
 dispatch_get_global_queue
@@ -51,8 +50,46 @@ dispatch_sync(..., ^(block)) // 同步线程
 dispatch_async(..., ^(block)) // 异步线程
 ```
 
-### 五个案例
+### CGD group
 
+队列组可以将很多队列添加到一个组里，这样做的好处是，当这个组里所有的任务都执行完了，队列组会通过一个方法通知我们。下面是使用方法，这是一个很实用的功能。
+
+``` objective-c
+//1.创建队列组
+dispatch_group_t group = dispatch_group_create();
+//2.创建队列
+dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+//3.多次使用队列组的方法执行任务, 只有异步方法
+//3.1.执行3次循环
+dispatch_group_async(group, queue, ^{
+   for (NSInteger i = 0; i < 3; i++) {
+       NSLog(@"group-01 - %@", [NSThread currentThread]);
+   }
+});
+
+//3.2.主队列执行8次循环
+dispatch_group_async(group, dispatch_get_main_queue(), ^{
+   for (NSInteger i = 0; i < 8; i++) {
+       NSLog(@"group-02 - %@", [NSThread currentThread]);
+   }
+});
+
+//3.3.执行5次循环
+dispatch_group_async(group, queue, ^{
+   for (NSInteger i = 0; i < 5; i++) {
+       NSLog(@"group-03 - %@", [NSThread currentThread]);
+   }
+});
+
+//4.都完成后会自动通知
+dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+   NSLog(@"完成 - %@", [NSThread currentThread]);
+});
+
+```
+
+### 死锁的5个案例
 
 > 案例一
 
