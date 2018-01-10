@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>测试 · GitBook</title>
+        <title># Runtime 使用场景 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="WebSocket.html" />
+    <link rel="next" href="runtime相关术语.html" />
     
     
-    <link rel="prev" href="Responder.html" />
+    <link rel="prev" href="runLoop入门.html" />
     
 
     </head>
@@ -839,7 +839,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11.14" data-path="UnitTest.html">
+        <li class="chapter " data-level="1.11.14" data-path="UnitTest.html">
             
                 <a href="UnitTest.html">
             
@@ -988,7 +988,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.23" data-path="runtime使用场景.html">
+        <li class="chapter active" data-level="1.11.23" data-path="runtime使用场景.html">
             
                 <a href="runtime使用场景.html">
             
@@ -1397,7 +1397,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >测试</a>
+        <a href=".." ># Runtime 使用场景</a>
     </h1>
 </div>
 
@@ -1412,10 +1412,114 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</h1>
-<p><a href="http://www.jianshu.com/p/8bbec078cabe" target="_blank">&#x5355;&#x5143;&#x6D4B;&#x8BD5;</a></p>
-<p><a href="http://www.jianshu.com/p/07cfc17916e8" target="_blank">&#x5355;&#x5143;&#x6D4B;&#x8BD5;</a></p>
+                                <h2 id="runtime-&#x4F7F;&#x7528;&#x573A;&#x666F;">Runtime &#x4F7F;&#x7528;&#x573A;&#x666F;</h2>
+<h3 id="ios&#x5F00;&#x53D1;&#x63A2;&#x7D22;-runtime&#x539F;&#x7406;&#x89E3;&#x8BFB;&#x53CA;&#x5B9E;&#x8DF5;"><a href="https://www.jianshu.com/p/462b88edbe5c" target="_blank">iOS&#x5F00;&#x53D1;&#x63A2;&#x7D22;-Runtime&#x539F;&#x7406;&#x89E3;&#x8BFB;&#x53CA;&#x5B9E;&#x8DF5;</a></h3>
+<blockquote>
+<p>lib: Runtime</p>
+</blockquote>
+<ol>
+<li>&#x52A8;&#x6001;&#x53D8;&#x91CF;&#x63A7;&#x5236;: object_setIvar</li>
+</ol>
+<pre><code class="lang-objc">
+- (<span class="hljs-keyword">void</span>)changeVariable {
 
+    Student \*student = [Student new];
+    student.name = <span class="hljs-string">@&quot;&#x4E54;&#x5E03;&#x65AF;&quot;</span>;
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>,student.name);
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count;
+    Ivar \*ivar = class_copyIvarList([student class], &amp;count);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt; count; i++) {
+        Ivar var = ivar[i];
+        <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> \*varName = ivar_getName(var);
+        <span class="hljs-built_in">NSString</span> \*name = [<span class="hljs-built_in">NSString</span> stringWithCString:varName encoding:<span class="hljs-built_in">NSUTF8StringEncoding</span>];
+        <span class="hljs-keyword">if</span> ([name isEqualToString:<span class="hljs-string">@&quot;\_name&quot;</span>]) {
+            object_setIvar(student, var, <span class="hljs-string">@&quot;Steve Jobs&quot;</span>);
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>,student.name);   
+}
+</code></pre>
+<ol>
+<li>&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;:class_addMethod</li>
+</ol>
+<pre><code class="lang-objc">
+<span class="hljs-keyword">void</span> happyNewYear(<span class="hljs-keyword">id</span> <span class="hljs-keyword">self</span>, SEL \_cmd){
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;&#x65B0;&#x5E74;&#x5FEB;&#x4E50;&quot;</span>);
+    }
+<span class="hljs-comment">// &#x6CE8;&#x610F;:</span>
+<span class="hljs-comment">// 1.void&#x7684;&#x524D;&#x9762;&#x6CA1;&#x6709;+&#x3001;-&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x662F;C&#x7684;&#x4EE3;&#x7801;&#x3002;</span>
+<span class="hljs-comment">// 2.&#x5FC5;&#x987B;&#x6709;&#x4E24;&#x4E2A;&#x6307;&#x5B9A;&#x53C2;&#x6570;(id self,SEL \_cmd)</span>
+    - (<span class="hljs-keyword">void</span>)addMethod
+    {
+        Student \*student = [Student new];
+        student.name = <span class="hljs-string">@&quot;&#x4E54;&#x5E03;&#x65AF;&quot;</span>;
+        class_addMethod([student class], <span class="hljs-keyword">@selector</span>(join), (IMP)happyNewYear, <span class="hljs-string">&quot;v@:&quot;</span>);
+        [student performSelector:<span class="hljs-keyword">@selector</span>(join)];
+    }
+
+<span class="hljs-comment">// &#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</span>
+<span class="hljs-comment">// (IMP)happyNewYear &#x610F;&#x601D;&#x662F;happyNewYear&#x7684;&#x5730;&#x5740;&#x6307;&#x9488;;</span>
+<span class="hljs-comment">// &quot;v@:&quot; &#x610F;&#x601D;&#x662F;&#xFF0C;v&#x4EE3;&#x8868;&#x65E0;&#x8FD4;&#x56DE;&#x503C;void&#xFF0C;&#x5982;&#x679C;&#x662F;i&#x5219;&#x4EE3;&#x8868;int&#xFF1B;@&#x4EE3;&#x8868; id sel; : &#x4EE3;&#x8868; SEL _cmd;</span>
+<span class="hljs-comment">// &#x201C;v@:@@&#x201D; &#x610F;&#x601D;&#x662F;&#xFF0C;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x3002;</span>
+
+<span class="hljs-comment">//&#x8F93;&#x51FA;&#x7ED3;&#x679C;</span>
+<span class="hljs-comment">// 2016-02-22 11:10:06.379 Day2016-02-04[9296:1003059] &#x65B0;&#x5E74;&#x5FEB;&#x4E50;</span>
+</code></pre>
+<ol>
+<li>&#x52A8;&#x6001;&#x4E3A;Category&#x6269;&#x5C55;&#x52A0;&#x5C5E;&#x6027;: objc_setAssociatedObject, objc_getAssociatedObject</li>
+</ol>
+<pre><code class="lang-objc">
+<span class="hljs-comment">// XCode&#x8FD0;&#x884C;&#x4F60;&#x5728;Category&#x7684;.h&#x6587;&#x4EF6;&#x7533;&#x660E;@Property&#xFF0C;&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#xFF0C;&#x4F46;&#x8FD0;&#x884C;&#x65F6;&#x5982;&#x679C;&#x6CA1;&#x6709;Runtime&#x5904;&#x7406;&#xFF0C;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x53D6;&#x503C;&#xFF0C;&#x5C31;&#x9A6C;&#x4E0A;&#x62A5;&#x9519;&#x3002;</span>
+<span class="hljs-comment">//  &#x9996;&#x5148;&#x6DFB;&#x52A0;&#x5206;&#x7C7B;Student+Category</span>
+<span class="hljs-comment">// Student+Category.h&#x6587;&#x4EF6;</span>
+    <span class="hljs-meta">#import <span class="hljs-meta-string">&quot;Student.h&quot;</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">Student</span> (<span class="hljs-title">Category</span>)</span>
+    <span class="hljs-keyword">@property</span>(<span class="hljs-keyword">nonatomic</span>,<span class="hljs-keyword">copy</span>)<span class="hljs-built_in">NSString</span> \*firstName;
+    <span class="hljs-keyword">@end</span>
+<span class="hljs-comment">// Student+Category.m&#x6587;&#x4EF6;</span>
+    <span class="hljs-meta">#import <span class="hljs-meta-string">&quot;Student+Category.h&quot;</span></span>
+    <span class="hljs-meta">#import <span class="hljs-meta-string">&lt;objc/runtime.h&gt;</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">Student</span> (<span class="hljs-title">Category</span>)</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> name;
+    - (<span class="hljs-keyword">void</span>)setFirstName:(<span class="hljs-built_in">NSString</span> \*)firstName  {
+        objc_setAssociatedObject(<span class="hljs-keyword">self</span>, &amp;name, firstName, OBJC_ASSO<span class="hljs-built_in">CIATION_COPY_NONATOMIC</span>);
+    }
+    -(<span class="hljs-built_in">NSString</span> \*)firstName {
+       <span class="hljs-keyword">return</span>  objc_getAssociatedObject(<span class="hljs-keyword">self</span>, &amp;name);
+    }
+    <span class="hljs-keyword">@end</span>
+
+<span class="hljs-comment">// &gt; &#x8C03;&#x7528;&#x5B9E;&#x73B0;</span>
+    - (<span class="hljs-keyword">void</span>)addExtentionProperty
+    {
+        Student \*student = [Student new];
+        student.firstName = <span class="hljs-string">@&quot;Steve&quot;</span>;
+        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;firstName&#x7ED3;&#x679C;:%@ &quot;</span>,student.firstName);
+    }
+<span class="hljs-comment">// &gt; &#x8F93;&#x51FA;&#x7ED3;&#x679C;:</span>
+<span class="hljs-comment">// ```2016-02-22 11:21:58.765 Day2016-02-04[9354:1010756] &#x6DFB;&#x52A0;&#x5C5E;&#x6027;firstName&#x7ED3;&#x679C;:Steve</span>
+</code></pre>
+<pre><code>
+4. &#x52A8;&#x6001;&#x4EA4;&#x6362;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;: method_exchangeImplementations
+
+```objc
+- (void)exchangeMethod
+    {
+        Student \*student = [Student new];
+        student.name = @&quot;&#x4E54;&#x5E03;&#x65AF;&quot;;
+        [student eat];
+        [student sleep];
+
+        NSLog(@&quot;----------&#x4EA4;&#x6362;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;-----------&quot;);
+        Method m1 = class_getInstanceMethod([student class], @selector(eat));
+        Method m2 = class_getInstanceMethod([student class], @selector(sleep));
+        method_exchangeImplementations(m1, m2);
+
+        [student eat];
+        [student sleep];
+    }
+</code></pre>
                                 
                                 </section>
                             
@@ -1442,12 +1546,12 @@
 
             
                 
-                <a href="Responder.html" class="navigation navigation-prev " aria-label="Previous page: 响应者链">
+                <a href="runLoop入门.html" class="navigation navigation-prev " aria-label="Previous page: RunLoop">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="WebSocket.html" class="navigation navigation-next " aria-label="Next page: webSocket">
+                <a href="runtime相关术语.html" class="navigation navigation-next " aria-label="Next page: ## 可能碰到的iOS笔试面试题">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1458,7 +1562,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"测试","level":"1.11.14","depth":2,"next":{"title":"webSocket","level":"1.11.15","depth":2,"path":"iOS/WebSocket.md","ref":"iOS/WebSocket.md","articles":[]},"previous":{"title":"响应者链","level":"1.11.13","depth":2,"path":"iOS/Responder.md","ref":"iOS/Responder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/UnitTest.md","mtime":"2018-01-10T12:53:37.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T12:54:51.874Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"# Runtime 使用场景","level":"1.11.23","depth":2,"next":{"title":"## 可能碰到的iOS笔试面试题","level":"1.11.24","depth":2,"path":"iOS/runtime相关术语.md","ref":"iOS/runtime相关术语.md","articles":[]},"previous":{"title":"RunLoop","level":"1.11.22","depth":2,"path":"iOS/runLoop入门.md","ref":"iOS/runLoop入门.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/runtime使用场景.md","mtime":"2018-01-10T12:53:37.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T12:54:51.874Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
