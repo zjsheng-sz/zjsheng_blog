@@ -15,7 +15,8 @@ objectC: Programming with Objective-C    OK
 runtime                                  OK
 runloop                                  Ok
 多线程                                    OK
+动画:UIView,CoreAnimation                 OK
+CoreGraphic                              OK   半斤八两
+支付                                      
 锁、信号量、死锁
-动画
-支付
 swift：The Swift Programming Language

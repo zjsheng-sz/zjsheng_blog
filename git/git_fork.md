@@ -18,9 +18,7 @@
   git remote add upstream ...
 
  #查看本地仓库关联的远程地址
-  git remote -v
-
-  # 获取fork源仓库的更新， 实现本地同步
+                                                 # 获取fork源仓库的更新， 实现本地同步
   git fetch upstream
   git checkout master
   git merge updsteam/master
