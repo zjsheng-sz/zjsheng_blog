@@ -7,8 +7,8 @@
 
 
 > [深入理解RunLoop](http://www.cocoachina.com/ios/20150601/11970.html) 内容深刻详细  
-> [iOS-RunLoop充满灵性的死循环](https://www.jianshu.com/p/b9426458fcf6)  生动
-> [RunLoop入门 看我就够了](https://www.jianshu.com/p/2d3c8e084205)   上两者的结合，最是简介
+> [iOS-RunLoop充满灵性的死循环](https://www.jianshu.com/p/b9426458fcf6)  生动  
+> [RunLoop入门 看我就够了](https://www.jianshu.com/p/2d3c8e084205)   上两者的结合，最简洁
 
 
 ## RunLoop简介

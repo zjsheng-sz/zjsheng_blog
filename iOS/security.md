@@ -31,10 +31,10 @@ token 值有失效时间:
 
 APP登录的时候发送加密的用户名和密码到服务器，服务器验证用户名和密码，如果成功，以某种方式比如随机生成32位的字符串作为token，存储到服务器中，并返回token到APP，以后APP请求时，凡是需要验证的地方都要带上该token，然后服务器端验证token，成功返回所需要的结果，失败返回错误信息，让他重新登录。其中服务器上token设置一个有效期，每次APP请求的时候都验证token和有效期
 
-https://github.com/bigmeow/JWT
+https://github.com/bigmeow/JWT  
 https://www.zhihu.com/question/30267006
 
-####  Md5 和 加盐
+####  Md5 和 加盐 乱序
 
 ```bash
 
@@ -79,3 +79,7 @@ $ echo -n abc|openssl md5        给字符串abc加密
 #### SSL
 
 #### https
+
+### [iOS KeyChain 基础](https://cnbin.github.io/blog/2015/08/18/ios-keychain-ji-chu/)
+
+### [唐巧](iOS应用安全开发概述)

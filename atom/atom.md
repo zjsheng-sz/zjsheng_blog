@@ -17,12 +17,12 @@
 * alt + cmd + ]	展开 所在代码块
 * alt + cmd + shift + [	收起 当前所有代码块
 * alt + cmd + shift + ]	展开 当前所有代码块
-* cmd + ,	settings
+* cmd + ,	settingss
 * cmd + k ... 方向键	切分面板
 * cmd + k ... cmd + 方向	切换面板
 * cmd + w	关闭当前工作面板
 * cmd + shift + w 关闭当前窗口
-* alt + cmd + 左右	切换tab文件选项卡
-* __ctl + shift + c  复制路径__
 * cmd + shift + p  显示所有命令
-* __cmd-L 选取一行，继续按回选取下一行__
+* __alt + cmd + R/L	切换tab文件选项卡
+* __ctl + shift + c  复制路径__
+* __cmd-L 选取一行，继续按会选取下一行__

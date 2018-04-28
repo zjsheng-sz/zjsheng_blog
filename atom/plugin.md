@@ -19,6 +19,10 @@ Ctrl + Alt + O
 
 ### platformio-ide-terminal
 
+search 
+
 在atom中使用terminal
+
+cmd + shift + t
 
 ###

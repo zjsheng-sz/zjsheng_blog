@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
     //1.创建自定义的layer
-    CALayer *layer=[CALayer layer];
+    CALayer \*layer=[CALayer layer];
     //2.设置layer的属性
     layer.backgroundColor=[UIColor brownColor].CGColor;
     layer.bounds=CGRectMake(0, 0, 200, 150);
