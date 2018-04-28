@@ -1,3 +1,4 @@
+./scripts/build.sh: 6: ./scripts/build.sh: https://www.jianshu.com/p/86ac7d3b593a: not found
 /home/travis/build/zjsrose/zjsheng_blog/scripts/../SUMMARY.md
 [0;36minfo:[0m 7 plugins are installed 
 [0;36minfo:[0m 6 explicitly listed 
@@ -7,5 +8,5 @@
 [0;36minfo:[0m loading plugin "sharing"... [0;32mOK[0m 
 [0;36minfo:[0m loading plugin "fontsettings"... [0;32mOK[0m 
 [0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
-[0;36minfo:[0m found 70 pages 
+[0;36minfo:[0m found 72 pages 
 [0;36minfo:[0m found 39 asset files 

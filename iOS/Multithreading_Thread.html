@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Multithreading_Thread · GitBook</title>
+        <title>关于iOS多线程，你看我就够了 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -805,7 +805,7 @@
                 <a href="Multithreading_Thread.html">
             
                     
-                    Multithreading_Thread
+                    关于iOS多线程，你看我就够了
             
                 </a>
             
@@ -1027,7 +1027,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.26" data-path="富文本.html">
+        <li class="chapter " data-level="1.11.26" data-path="动画：UIView.html">
+            
+                <a href="动画：UIView.html">
+            
+                    
+                    iOS动画篇：UIView动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.27" data-path="富文本.html">
             
                 <a href="富文本.html">
             
@@ -1040,7 +1053,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.27" data-path="性能优化.html">
+        <li class="chapter " data-level="1.11.28" data-path="性能优化.html">
             
                 <a href="性能优化.html">
             
@@ -1053,7 +1066,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.28" data-path="文件传输.html">
+        <li class="chapter " data-level="1.11.29" data-path="文件传输.html">
             
                 <a href="文件传输.html">
             
@@ -1066,7 +1079,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.29" data-path="缓存机制.html">
+        <li class="chapter " data-level="1.11.30" data-path="缓存机制.html">
             
                 <a href="缓存机制.html">
             
@@ -1079,7 +1092,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.30" data-path="面试问答.html">
+        <li class="chapter " data-level="1.11.31" data-path="设计模式.html">
+            
+                <a href="设计模式.html">
+            
+                    
+                    设计模式六大原则：
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.32" data-path="面试问答.html">
             
                 <a href="面试问答.html">
             
@@ -1397,7 +1423,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Multithreading_Thread</a>
+        <a href=".." >关于iOS多线程，你看我就够了</a>
     </h1>
 </div>
 
@@ -1412,7 +1438,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <p><a href="https://www.jianshu.com/p/0b0d9b1f1f19" target="_blank">&#x5173;&#x4E8E;iOS&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F60;&#x770B;&#x6211;&#x5C31;&#x591F;&#x4E86;</a></p>
+<h3 id="thread">Thread</h3>
+<pre><code class="lang-objc">  <span class="hljs-comment">// &#x5148;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x7C7B;&#xFF0C;&#x518D;&#x542F;&#x52A8;</span>
+  <span class="hljs-comment">// &#x521B;&#x5EFA;</span>
+  <span class="hljs-built_in">NSThread</span> *thread = [[<span class="hljs-built_in">NSThread</span> alloc] initWithTarget:<span class="hljs-keyword">self</span> selector:<span class="hljs-keyword">@selector</span>(run:) object:<span class="hljs-literal">nil</span>];
+  <span class="hljs-comment">// &#x542F;&#x52A8;</span>
+  [thread start];
+
+  <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5E76;&#x81EA;&#x52A8;&#x542F;&#x52A8;</span>
+  [<span class="hljs-built_in">NSThread</span> detachNewThreadSelector:<span class="hljs-keyword">@selector</span>(run:) toTarget:<span class="hljs-keyword">self</span> withObject:<span class="hljs-literal">nil</span>];
+
+
+  <span class="hljs-comment">//&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</span>
+
+  <span class="hljs-comment">//&#x53D6;&#x6D88;&#x7EBF;&#x7A0B;</span>
+  - (<span class="hljs-keyword">void</span>)cancel;
+  <span class="hljs-comment">//&#x542F;&#x52A8;&#x7EBF;&#x7A0B;</span>
+  - (<span class="hljs-keyword">void</span>)start;
+  <span class="hljs-comment">//&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x7684;&#x5C5E;&#x6027;</span>
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isExecuting) <span class="hljs-built_in">BOOL</span> executing;
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isFinished) <span class="hljs-built_in">BOOL</span> finished;
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isCancelled) <span class="hljs-built_in">BOOL</span> cancelled;
+  <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;&#x7EBF;&#x7A0B;&#x540D;&#x5B57;</span>
+  -(<span class="hljs-keyword">void</span>)setName:(<span class="hljs-built_in">NSString</span> \*)name;
+  -(<span class="hljs-built_in">NSString</span> \*)name;
+  <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;</span>
+  + (<span class="hljs-built_in">NSThread</span> \*)currentThread;
+  <span class="hljs-comment">//&#x83B7;&#x53D6;&#x4E3B;&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;</span>
+  + (<span class="hljs-built_in">NSThread</span> \*)mainThread;
+  <span class="hljs-comment">//&#x4F7F;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6682;&#x505C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x6216;&#x8005;&#x6682;&#x505C;&#x5230;&#x67D0;&#x4E2A;&#x65F6;&#x523B;</span>
+  + (<span class="hljs-keyword">void</span>)sleepForTimeInterval:(<span class="hljs-built_in">NSTimeInterval</span>)time;
+  + (<span class="hljs-keyword">void</span>)sleepUntilDate:(<span class="hljs-built_in">NSDate</span> \*)date;
+</code></pre>
+
                                 
                                 </section>
                             
@@ -1455,7 +1514,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Multithreading_Thread","level":"1.11.11","depth":2,"next":{"title":"NetWork","level":"1.11.12","depth":2,"path":"iOS/NetWork.md","ref":"iOS/NetWork.md","articles":[]},"previous":{"title":"关于iOS多线程，你看我就够了","level":"1.11.10","depth":2,"path":"iOS/Multithreading_NSOperation.md","ref":"iOS/Multithreading_NSOperation.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/Multithreading_Thread.md","mtime":"2018-01-10T12:53:37.221Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-10T12:54:51.874Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"关于iOS多线程，你看我就够了","level":"1.11.11","depth":2,"next":{"title":"NetWork","level":"1.11.12","depth":2,"path":"iOS/NetWork.md","ref":"iOS/NetWork.md","articles":[]},"previous":{"title":"关于iOS多线程，你看我就够了","level":"1.11.10","depth":2,"path":"iOS/Multithreading_NSOperation.md","ref":"iOS/Multithreading_NSOperation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/Multithreading_Thread.md","mtime":"2018-04-28T02:12:54.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-28T02:13:59.078Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
