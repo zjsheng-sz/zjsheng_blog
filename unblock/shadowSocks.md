@@ -38,7 +38,6 @@ pip install shadowsocks
 * Windows:
 	[See Install Server on Windows](https://github.com/shadowsocks/shadowsocks/wiki/Install-Shadowsocks-Server-on-Windows)
 
-
 #### Server
 
 * To set password
