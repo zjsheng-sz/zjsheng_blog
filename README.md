@@ -6,6 +6,8 @@
 * [brew](/brew)
     * [brew](/brew/brew.md)
 * [C](/C)
+    * [queue](/C/queue)
+    * [stack](/C/stack)
 * [CI](/CI)
     * [Travis](/CI/Travis.md)
 * [docker](/docker)

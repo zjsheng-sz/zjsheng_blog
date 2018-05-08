@@ -6,6 +6,8 @@
 * brew
     * [brew](/brew/brew.md)
 * C
+    * queue
+    * stack
 * CI
     * [Travis](/CI/Travis.md)
 * docker
