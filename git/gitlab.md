@@ -48,7 +48,7 @@
   clone:`git clone ssh://git@10.240.3.82:2222/root/TechnologyShare.git`  
   更新:`git pull`  
   提交:`git add .`, `git commit -m"update"`, `git push origin master`  
-  详情见[git使用说明](git使用说明.md)
+  详情见[git使用说明](./git_basic.md)
 
 ### 使用makedown编辑
 

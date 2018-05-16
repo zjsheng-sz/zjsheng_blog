@@ -72,7 +72,7 @@
     * [17年01月笔记概要](/mynote/17年01月笔记概要.md)
     * [17年02月笔记概要](/mynote/17年02月笔记概要.md)
     * [17年03月笔记概要](/mynote/17年03月笔记概要.md)
-    * [## 0508](/mynote/18年5月笔记概要.md)
+    * [## 专题一： 代码管理](/mynote/18年5月笔记概要.md)
     * [知识体系一览](/mynote/知识体系一览.md)
 * [objectC](/objectC)
     * [ObjectC文档1](/objectC/document1.md)
