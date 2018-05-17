@@ -2,7 +2,6 @@
 
 * [atom](/atom)
     * [atom基本使用](/atom/atom.md)
-    * [atom插件](/atom/plugin.md)
 * [brew](/brew)
     * [brew](/brew/brew.md)
 * [C](/C)

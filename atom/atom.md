@@ -1,5 +1,6 @@
 # atom基本使用
 
+
 ## atom快捷方式
 
 * cmd + t	模糊搜索工作目录下的文件
@@ -26,3 +27,9 @@
 * __alt + cmd + R/L	切换tab文件选项卡
 * __ctl + shift + c  复制路径__
 * __cmd-L 选取一行，继续按会选取下一行__
+
+
+## apm
+
+    $apm search git-plus
+    $apm install git-plus

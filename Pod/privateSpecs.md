@@ -2,7 +2,7 @@
 
 [如何创建私有 CocoaPods 仓库](http://www.jianshu.com/p/ddc2490bff9f)
 
-### 创建一个私有的 Spec Repo
+### 创建一个私有的 Spec Repo下
 
         pod repo add REPO_NAME SOURCE_URL
 
