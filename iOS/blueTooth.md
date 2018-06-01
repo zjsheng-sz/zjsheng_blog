@@ -3,6 +3,10 @@
 
 [cocoachina](http://www.cocoachina.com/ios/20161021/17813.html)
 
+[raywenderlich](https://www.raywenderlich.com/177848/core-bluetooth-tutorial-for-ios-heart-rate-monitor)
+
+[iOS连接外设的几种方式](http://www.cocoachina.com/bbs/read.php?tid-1689738.html)
+
 ### 蓝牙连接可以大致分为以下几个步骤:   
 1. 建立一个Central Manager实例进行蓝牙管理
 2. 搜索外围设备

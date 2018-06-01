@@ -51,3 +51,25 @@ target 'CommonFoundation' do
 end
 
 ```
+
+
+1. 配置prefix
+2. 头文件
+3. 配置link binary with libraries
+4. 配合copy Bundle Resources
+5. 处理appDelegate 用yykit代替
+6. Header serarch path 改为可递归的
+7. CommonFoundation 编译时改为release模式
+
+
+
+### 代码中区分不同的target
+
+
+### 无静态库方案
+
+1. 删除静态库工程 及 删除静态库引用
+2. prefix文件中增加YYCache头文件
+3. 修改platform项目 other liker flag
+4. pod install
+5. 改diag项目 other liker flag 和header search path 和 framework search path
