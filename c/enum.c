@@ -16,12 +16,11 @@ typedef enum{
 	DIAMONDS,
 	HEARTS,
 	SPADES
+
 } Suit;
 
 
 int main(){
-	
-
 
 	return 0;
 }

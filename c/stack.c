@@ -13,7 +13,7 @@ typedef struct{
 
 //初始化
 void init_sqstack(sqstack *sq){
-	
+
     sq->top = -1;
 }
 //判栈空
@@ -26,7 +26,7 @@ int empty_sqstack(sqstack *sq){
 int push_sqstack(sqstack *sq, datatype x){
 
 	if(sq->top == maxsize - 1){
-	
+
 		printf("栈满，不能进栈！\n");
 		return 0;
 	}
@@ -76,8 +76,8 @@ void empty_lkstack(lkstack *lk){//判栈空
 void push_lkstack(lkstack *lk, datatype x){//进栈
 
     pointer p;          //申请新节点*p
-    p = new node;	
-    p->data = x;	
+    p = new node;
+    p->data = x;
     p->next = ls->top;  //更改新节点next指针，原栈顶成为新节点的后继
     lk->top = p;        //改栈顶指针，新节点成为新的栈顶
 }
@@ -89,7 +89,7 @@ int pop_lkstack(lkstack *lk, datatype *x){//退栈
 		return 0;
 	}
 	p = lk->top;
-	*x = p->data;	
+	*x = p->data;
 	lk->top = lk->top->next;
 	delete p;                       //C++，释放原来空间
 	return 1;

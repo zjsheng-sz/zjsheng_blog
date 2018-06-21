@@ -9,4 +9,3 @@
 |--------|---------|--------|-----------
 | Swift code | No import statement | #import "ProductModuleName-Swift.h"
 | Objective-C code | No import statement; Objective-C bridging header required | #import "Header.h"
-w

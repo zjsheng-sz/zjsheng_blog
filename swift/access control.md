@@ -1,8 +1,5 @@
 # Swift学习笔记 - 访问权限
 
-* [Swift 学习指引](http://www.swiftguide.cn/)
-* Swift 文档
-
 
 #### for循环 和 输出
 
