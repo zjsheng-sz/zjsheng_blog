@@ -140,28 +140,22 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.2.2.1" data-path="../C/Tree/tree.html">
-            
-                <a href="../C/Tree/tree.html">
-            
-                    
-                    tree
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    arithmeticBook
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" >
             
                 <span>
             
@@ -1517,7 +1511,27 @@ SQLCipher&#x5B98;&#x7F51;&#xFF1A;<a href="https://www.zetetic.net/sqlcipher/" ta
 <h3 id="&#x96C6;&#x6210;-sqlcipher">&#x96C6;&#x6210; SQLCipher</h3>
 <pre><code>  pod &apos;FMDB/SQLCipher&apos;
 </code></pre><h3 id="&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;">&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;</h3>
-<pre><code>- (BOOL)setKey:(NSString*)key;
+<pre><code>+ (instancetype)databaseQueueWithPath:(NSString*)aPath
+
+&#x4E2D;&#x8C03;&#x7528;&#x4E00;&#x6B21; ,&#x4F8B;&#x5982;&#xFF1A;
+
+self.dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbPath]
+
+[self.dbQueue inDatabase:^(FMDatabase*db) {
+
+    [db setKey:kDBEncryptedKey]
+
+}];
+
+//&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x5751;&#xFF1A;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x8C03;&#x7528;
+
+- (void)inDatabase:(void(^)(FMDatabase*db))block
+
+&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8981;&#x5728;block&#x91CC;&#x8C03;&#x7528;
+
+- (BOOL)setKey:(NSString*)key
+
+&#x53EA;&#x9700;&#x8981;&#x5728;&#x521D;&#x59CB;&#x5316;FMDatabaseQueue&#x5B8C;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x5373;&#x53EF;&#xFF0C;&#x800C;&#x4E14;&#x8981;&#x4FDD;&#x8BC1;&#x6700;&#x5148;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x7136;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x975E;&#x6CD5;&#x7684;&#xFF01;
 </code></pre>
                                 
                                 </section>
@@ -1561,7 +1575,7 @@ SQLCipher&#x5B98;&#x7F51;&#xFF1A;<a href="https://www.zetetic.net/sqlcipher/" ta
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"- https://www.jianshu.com/p/66e15b4bb8d6","level":"1.12.13","depth":2,"next":{"title":"测试","level":"1.12.14","depth":2,"path":"iOS/UnitTest.md","ref":"iOS/UnitTest.md","articles":[]},"previous":{"title":"响应者链","level":"1.12.12","depth":2,"path":"iOS/Responder.md","ref":"iOS/Responder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/SQLCipher.md","mtime":"2018-06-02T07:53:40.835Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-02T07:54:28.138Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"- https://www.jianshu.com/p/66e15b4bb8d6","level":"1.12.13","depth":2,"next":{"title":"测试","level":"1.12.14","depth":2,"path":"iOS/UnitTest.md","ref":"iOS/UnitTest.md","articles":[]},"previous":{"title":"响应者链","level":"1.12.12","depth":2,"path":"iOS/Responder.md","ref":"iOS/Responder.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/SQLCipher.md","mtime":"2018-06-21T09:23:19.517Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-21T09:24:17.129Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

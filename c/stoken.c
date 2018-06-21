@@ -1,30 +1,22 @@
 //假设你能预知某只股票未来100秒内价格（每秒1个价格），只允许你交易2次（买1次，卖1次），同时最多能持有k股，请写一段代码算出最大收益p
+float maxIncome(float A[], int N);
 
-float getMaxProfit(/* arguments */) {
+int main(int argc, char const *argv[]) {
 
-	float price[100];
-
-	float maxProfit = price[1] - price[0];
-
-	for (int i = 0; i < 100-1; i++) {
-
-		for (int j = i+1; i < 100; j++) {
-
-				maxProfit =  price[j] - price[i] > maxProfit ? price[j] - price[i] : maxProfit;
-		}
-
-	}
-
-	return maxProfit;
+	return 0;
 }
 
 
+float maxIncome(float A[], int N){
 
-int main(){
+	float maxIncome = 0;
 
-	float maxProfit = getMaxProfit();
+	for (int i = 0; i < N - 1; i++) {
 
-	printf("%.2f\n",maxProfit );
+		for (int j = i + 1; j < N; j++) {
 
-	return 0;
+			maxIncome = (A[j] - A[i]) > maxIncome ? (A[j] - A[i]) : maxIncome;
+
+		}
+	}
 }
