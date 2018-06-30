@@ -129,7 +129,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../C/arithmeticBook/readme.html">
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    Tree
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../C/arithmeticBook/readme.html">
             
                 <a href="../C/arithmeticBook/readme.html">
             
@@ -675,7 +688,7 @@
                 <a href="CALayer.html">
             
                     
-                    CALayer
+                    ## UIView
             
                 </a>
             
@@ -949,20 +962,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.21" data-path="optimize.html">
-            
-                <a href="optimize.html">
-            
-                    
-                    iOS性能优化
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.22" data-path="runLoop入门.html">
+        <li class="chapter " data-level="1.12.21" data-path="runLoop入门.html">
             
                 <a href="runLoop入门.html">
             
@@ -975,7 +975,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.23" data-path="runtime使用场景.html">
+        <li class="chapter " data-level="1.12.22" data-path="runtime使用场景.html">
             
                 <a href="runtime使用场景.html">
             
@@ -988,7 +988,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.24" data-path="runtime相关术语.html">
+        <li class="chapter " data-level="1.12.23" data-path="runtime相关术语.html">
             
                 <a href="runtime相关术语.html">
             
@@ -1001,7 +1001,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.25" data-path="security.html">
+        <li class="chapter " data-level="1.12.24" data-path="security.html">
             
                 <a href="security.html">
             
@@ -1014,7 +1014,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.26" data-path="动画：UIView.html">
+        <li class="chapter " data-level="1.12.25" data-path="动画：UIView.html">
             
                 <a href="动画：UIView.html">
             
@@ -1027,7 +1027,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.27" data-path="富文本.html">
+        <li class="chapter " data-level="1.12.26" data-path="富文本.html">
             
                 <a href="富文本.html">
             
@@ -1040,7 +1040,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.28" data-path="性能优化.html">
+        <li class="chapter " data-level="1.12.27" data-path="性能优化.html">
             
                 <a href="性能优化.html">
             
@@ -1053,7 +1053,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.29" data-path="文件传输.html">
+        <li class="chapter " data-level="1.12.28" data-path="文件传输.html">
             
                 <a href="文件传输.html">
             
@@ -1066,7 +1066,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.30" data-path="缓存机制.html">
+        <li class="chapter " data-level="1.12.29" data-path="缓存机制.html">
             
                 <a href="缓存机制.html">
             
@@ -1079,7 +1079,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.31" data-path="设计模式.html">
+        <li class="chapter " data-level="1.12.30" data-path="设计模式.html">
             
                 <a href="设计模式.html">
             
@@ -1092,7 +1092,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.32" data-path="面试问答.html">
+        <li class="chapter " data-level="1.12.31" data-path="面试问答.html">
             
                 <a href="面试问答.html">
             
@@ -1493,7 +1493,7 @@
 <p><a href="http://blog.csdn.net/it_201607/article/details/51822790" target="_blank">iOS webview&#x6E05;&#x9664;&#x7F13;&#x5B58;</a></p>
 <pre><code class="lang-objc"><span class="hljs-comment">/**webView&#x9000;&#x51FA;&#x65B9;&#x6CD5;*/</span>  
 - (<span class="hljs-keyword">void</span>)closeBtnAction:(<span class="hljs-built_in">UIButton</span> *)button{  
-     _webView = <span class="hljs-literal">nil</span>;  
+     \_webView = <span class="hljs-literal">nil</span>;  
     [<span class="hljs-keyword">self</span> cleanCacheAndCookie];  
     [<span class="hljs-keyword">self</span>.navigationController popViewControllerAnimated:<span class="hljs-literal">YES</span>];  
 }  
@@ -1501,8 +1501,8 @@
 <span class="hljs-comment">/**&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x548C;cookie*/</span>  
 - (<span class="hljs-keyword">void</span>)cleanCacheAndCookie{  
     <span class="hljs-comment">//&#x6E05;&#x9664;cookies  </span>
-    <span class="hljs-built_in">NSHTTPCookie</span> *cookie;  
-    <span class="hljs-built_in">NSHTTPCookieStorage</span> *storage = [<span class="hljs-built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage];  
+    <span class="hljs-built_in">NSHTTPCookie</span> \*cookie;  
+    <span class="hljs-built_in">NSHTTPCookieStorage</span> \*storage = [<span class="hljs-built_in">NSHTTPCookieStorage</span> sharedHTTPCookieStorage];  
     <span class="hljs-keyword">for</span> (cookie <span class="hljs-keyword">in</span> [storage cookies]){  
         [storage deleteCookie:cookie];  
     }  
@@ -1552,7 +1552,7 @@
 
             
                 
-                <a href="CALayer.html" class="navigation navigation-prev " aria-label="Previous page: CALayer">
+                <a href="CALayer.html" class="navigation navigation-prev " aria-label="Previous page: ## UIView">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1568,7 +1568,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"webview清除缓存","level":"1.12.3","depth":2,"next":{"title":"Core Graphic","level":"1.12.4","depth":2,"path":"iOS/Core Graphic.md","ref":"iOS/Core Graphic.md","articles":[]},"previous":{"title":"CALayer","level":"1.12.2","depth":2,"path":"iOS/CALayer.md","ref":"iOS/CALayer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/CacheOfWebView.md","mtime":"2018-06-23T09:59:58.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-23T10:01:27.708Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"webview清除缓存","level":"1.12.3","depth":2,"next":{"title":"Core Graphic","level":"1.12.4","depth":2,"path":"iOS/Core Graphic.md","ref":"iOS/Core Graphic.md","articles":[]},"previous":{"title":"## UIView","level":"1.12.2","depth":2,"path":"iOS/CALayer.md","ref":"iOS/CALayer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/CacheOfWebView.md","mtime":"2018-06-30T10:03:48.544Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-30T10:04:58.014Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
