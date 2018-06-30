@@ -1,60 +1,86 @@
 
-# CALayer
+### UIView
 
-[CALayer自定义](http://www.cnblogs.com/wendingding/p/3800961.html)
+[layoutSubviews 和 drawRect](https://blog.csdn.net/meegomeego/article/details/39890385)
 
 
-1. 在方法： drawInContext:(CGContextRef)ctx）中用CoreGraphic绘制
-   setNeedsDisplay 调用drawInContext方法
 
-2. 设置CALayer的delegate，然后让delegate实现drawLayer:inContext:方法，当CALayer需要绘图时，会调用delegate的drawLayer:inContext:方法进行绘图
-```objc
-//
-//  YYViewController.m
-//  06-自定义layer(2)
-//
-//  Created by apple on 14-6-21.
-//  Copyright (c) 2014年 itcase. All rights reserved.
+### ios layout机制相关方法
 
-#import "YYViewController.h"
-@interface YYViewController ()
-@end
+- (CGSize)sizeThatFits:(CGSize)size
+- (void)sizeToFit
+---
+- (void)layoutSubviews
+- (void)layoutIfNeeded
+- (void)setNeedsLayout
+---
+- (void)setNeedsDisplay
+- (void)drawRect
+---
 
-@implementation YYViewController
+### layoutSubviews在以下情况下会被调用：
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    //1.创建自定义的layer
-    CALayer \*layer=[CALayer layer];
-    //2.设置layer的属性
-    layer.backgroundColor=[UIColor brownColor].CGColor;
-    layer.bounds=CGRectMake(0, 0, 200, 150);
-    layer.anchorPoint=CGPointZero;
-    layer.position=CGPointMake(100, 100);
-    layer.cornerRadius=20;
-    layer.shadowColor=[UIColor blackColor].CGColor;
-    layer.shadowOffset=CGSizeMake(10, 20);
-    layer.shadowOpacity=0.6;
+1. init初始化不会触发layoutSubviews
 
-    //设置代理
-    layer.delegate=self;
-    [layer setNeedsDisplay];
-    //3.添加layer
-    [self.view.layer addSublayer:layer];
-}
+   但是是用initWithFrame 进行初始化时，当rect的值不为CGRectZero时,也会触发
 
--(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
-{
-    //1.绘制图形
-    //画一个圆
-    CGContextAddEllipseInRect(ctx, CGRectMake(50, 50, 100, 100));
-    //设置属性（颜色）
-    //    [[UIColor yellowColor]set];
-    CGContextSetRGBFillColor(ctx, 0, 0, 1, 1);
+2. addSubview会触发layoutSubviews
 
-    //2.渲染
-    CGContextFillPath(ctx);
-}
-@end
-```
+3. 设置view的Frame会触发layoutSubviews，当然前提是frame的值设置前后发生了变化
+
+4. 滚动一个UIScrollView会触发layoutSubviews
+
+5. 旋转Screen会触发父UIView上的layoutSubviews事件
+
+6. 改变一个UIView大小的时候也会触发父UIView上的layoutSubviews事件
+
+>在苹果的官方文档中强调:  
+You should override this method only if the autoresizing behaviors of the subviews do not offer the behavior you want.
+
+layoutSubviews, 当我们在某个类的内部调整子视图位置时，需要调用。
+
+反过来的意思就是说：如果你想要在外部设置subviews的位置，就不要重写。
+
+### 刷新子对象布局
+
+* -layoutSubviews方法：这个方法，默认没有做任何事情，需要子类进行重写  
+* -setNeedsLayout方法： 标记为需要重新布局，异步调用layoutIfNeeded刷新布局，不立即刷新，但layoutSubviews一定会被调用  
+* -layoutIfNeeded方法：如果，有需要刷新的标记，立即调用layoutSubviews进行布局（如果没有标记，不会调用layoutSubviews）  
+
+如果要立即刷新，要先调用[view setNeedsLayout]，把标记设为需要布局，然后马上调用[view layoutIfNeeded]，实现布局
+
+在视图第一次显示之前，标记总是“需要刷新”的，可以直接调用[view layoutIfNeeded]
+
+### 重绘
+
+* -drawRect:(CGRect)rect方法：重写此方法，执行重绘任务  
+* -setNeedsDisplay方法：标记为需要重绘，异步调用drawRect  
+* -setNeedsDisplayInRect:(CGRect)invalidRect方法：标记为需要局部重绘  
+
+
+sizeToFit会自动调用sizeThatFits方法；
+
+sizeToFit不应该在子类中被重写，应该重写sizeThatFits
+
+sizeThatFits传入的参数是receiver当前的size，返回一个适合的size
+
+sizeToFit可以被手动直接调用
+
+sizeToFit和sizeThatFits方法都没有递归，对subviews也不负责，只负责自己
+
+
+### layoutSubviews 和 drawRect
+
+layoutSubviews对subviews重新布局
+
+layoutSubviews方法调用先于drawRect
+
+setNeedsLayout在receiver标上一个需要被重新布局的标记，在系统runloop的下一个周期自动调用layoutSubviews
+
+layoutIfNeeded方法如其名，UIKit会判断该receiver是否需要layout.根据Apple官方文档,layoutIfNeeded方法应该是这样的
+
+layoutIfNeeded遍历的不是superview链，应该是subviews链
+
+drawRect是对receiver的重绘，能获得context
+
+setNeedDisplay在receiver标上一个需要被重新绘图的标记，在下一个draw周期自动重绘，iphone device的刷新频率是60hz，也就是1/60秒后重绘

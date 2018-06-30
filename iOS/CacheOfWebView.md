@@ -7,7 +7,7 @@
 ```objc
 /**webView退出方法*/  
 - (void)closeBtnAction:(UIButton *)button{  
-     _webView = nil;  
+     \_webView = nil;  
     [self cleanCacheAndCookie];  
     [self.navigationController popViewControllerAnimated:YES];  
 }  
@@ -15,8 +15,8 @@
 /**清除缓存和cookie*/  
 - (void)cleanCacheAndCookie{  
     //清除cookies  
-    NSHTTPCookie *cookie;  
-    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];  
+    NSHTTPCookie \*cookie;  
+    NSHTTPCookieStorage \*storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];  
     for (cookie in [storage cookies]){  
         [storage deleteCookie:cookie];  
     }  
