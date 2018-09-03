@@ -43,7 +43,7 @@ PROVISIONING_PROFILE_NAME=$PROVISIONING_PROFILE_NAME_ENTPRISE
 
 #苹果账号
 AppleID="Diagnostic@auteltech.net"
-AppleIDPWD="Diagnostic321"
+AppleIDPWD="Diagnostic0806"
 
 #导出ipa 所需plist
 ADHOCExportOptionsPlist=$SCRIPT_DIR/ADHOCExportOptionsPlist.plist
