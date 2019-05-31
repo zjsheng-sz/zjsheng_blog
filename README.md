@@ -1,36 +1,36 @@
 # zjsheng's Blog
 
-* [atom](/atom)
+* atom
     * [atom基本使用](/atom/atom.md)
-* [brew](/brew)
+* brew
     * [brew](/brew/brew.md)
-* [C](/C)
-    * [LeetCode](/C/LeetCode)
-    * [stack](/C/stack)
-    * [Tree](/C/Tree)
+* C
+    * LeetCode
+    * stack
+    * Tree
         * [tree](/C/Tree/tree.md)
-* [CI](/CI)
+* CI
     * [Travis](/CI/Travis.md)
-* [docker](/docker)
+* docker
     * [docker](/docker/docker.md)
     * [gitlab](/docker/gitlab.md)
     * [wordpress](/docker/wordpress.md)
-* [ForJob](/ForJob)
+* ForJob
     * [resume](/ForJob/Resume.md)
-* [git](/git)
+* git
     * [git_basic](/git/git_basic.md)
     * [git_fork](/git/git_fork.md)
     * [ssh 方式搭建git服务](/git/git_server.md)
     * [gitbook](/git/gitbook.md)
     * [gitlab](/git/gitlab.md)
     * [gitPage](/git/gitpages.md)
-    * [Source](/git/Source)
-* [iOS](/iOS)
+    * Source
+* iOS
     * [AppDownLoadAddress](/iOS/AppDownLoadAddress.md)
     * [blueTooth](/iOS/blueTooth.md)
     * [webview清除缓存](/iOS/CacheOfWebView.md)
     * [CALayer](/iOS/CALayer.md)
-    * [construct](/iOS/construct)
+    * construct
         * [多项目共用代码](/iOS/construct/multiProject.md)
         * [框架搭建](/iOS/construct/框架搭建.md)
     * [Core Graphic](/iOS/Core Graphic.md)
@@ -60,9 +60,9 @@
     * [缓存机制](/iOS/缓存机制.md)
     * [设计模式六大原则：](/iOS/设计模式.md)
     * [面试问答](/iOS/面试问答.md)
-* [makedown](/makedown)
+* makedown
     * [makedown使用](/makedown/makedown.md)
-* [mynote](/mynote)
+* mynote
     * [16年11月笔记概要](/mynote/16年11月笔记概要.md)
     * [16年12月笔记概要](/mynote/16年12月笔记概要.md)
     * [17年01月笔记概要](/mynote/17年01月笔记概要.md)
@@ -71,26 +71,26 @@
     * [## 专题一： 代码管理](/mynote/18年5月笔记概要.md)
     * [## 专题三：  数据安全](/mynote/18年6月笔记概要.md)
     * [知识体系一览](/mynote/知识体系一览.md)
-* [objectC](/objectC)
+* objectC
     * [ObjectC文档1](/objectC/document1.md)
     * [ObjectC文档2](/objectC/document2.md)
-* [Pod](/Pod)
+* Pod
     * [cocoapods的安装与使用](/Pod/cocoaPods.md)
     * [制作自己的pod](/Pod/cocoaPods_trunk.md)
     * [制作私有Specs](/Pod/privateSpecs.md)
-* [regex](/regex)
+* regex
     * [Regex](/regex/Regex.md)
-* [shell](/shell)
-* [sql](/sql)
+* shell
+* sql
     * [数据库练习题目](/sql/数据库练习题目.md)
-* [swift](/swift)
+* swift
     * [Swift学习笔记 - 访问权限](/swift/access control.md)
     * [Swift学习笔记 - function](/swift/functions.md)
     * [Swift学习笔记 -Initialization](/swift/Initialization.md)
     * [Swift学习笔记 -Mix and Match Overview](/swift/MixAndMatchOverview.md)
-* [terminal](/terminal)
+* terminal
     * [终端使用初级](/terminal/terminal.md)
-* [unblock](/unblock)
+* unblock
     * [shadowsocks](/unblock/shadowSocks.md)
-* [xcode](/xcode)
+* xcode
     * [Xcode中常用的快捷键操作](/xcode/xcode.md)
