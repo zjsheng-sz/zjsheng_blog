@@ -97,13 +97,13 @@
         * [gitlab](/1-自动化编译/git/gitlab.md)
         * [ssh 方式搭建git服务](/1-自动化编译/git/git_server.md)
 * 源码阅读
-* [## 周一 0603](/now.md)
-* [## eclips自动补全](/eclipse.md)
-* [集中力量](/job.md)
+* [## 周一 0603](/0-now.md)
 * C
     * Tree
     * LeetCode
     * [1. 二叉查找树： 对于树中的每个节点X，它的左子树中的所有关键字的值小于X，而右子树的关键字的值大于X](/C/arithmeticBook/readme.md)
+* [集中力量](/0-job.md)
 * 0-MJ-数据结构
+    * [## eclips自动补全](/0-MJ-数据结构/eclipse.md)
 * unblock
     * [shadowsocks](/unblock/shadowSocks.md)
