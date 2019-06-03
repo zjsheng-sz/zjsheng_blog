@@ -1,0 +1,82 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+# fastlane method:ad-hoc/app-store
+
+desc " fastlane media method:ad-hoc/app-store"
+
+default_platform(:ios)
+
+platform :ios do
+
+  lane :media do |options|
+    # add actions here: https://docs.fastlane.tools/actions
+
+    export_method = options[:method];
+    build_configuration = "Release";
+    last_profile_component = "adhoc";
+
+    case export_method
+    when "ad-hoc"
+      last_profile_component = "adhoc";
+    when "app-store"
+      last_profile_component = "appstore";
+    end
+
+    # 安装描述文件
+    filePath = File::join(Pathname.new(File.expand_path('../..', __FILE__)) ,"/profile/media_#{last_profile_component}.mobileprovision")
+    puts "filePath: #{filePath}"
+    FastlaneCore::ProvisioningProfile.install(filePath)
+
+    #更新描述文件(手动设置，如果是自动设置，没必要执行这一句)
+    # update_project_provisioning(
+    #   xcodeproj: "./AUTMedia.xcodeproj",
+    #   profile: "./profile/media_#{last_profile_component}.mobileprovision", # optional if you use sigh
+    #   target_filter: ".*AUTMedia.*", # matches name or type of a target
+    #   build_configuration: "#{build_configuration}",
+    #   certificate: "./profile/AppleIncRootCertificate.cer",
+    # )
+
+    version_number = get_version_number(
+      xcodeproj:"./AUTMedia.xcodeproj",
+      target: "AUTMedia",
+      configuration: "#{build_configuration}"
+    )
+
+    build_number = get_build_number(
+      xcodeproj:"./AUTMedia.xcodeproj"
+    )
+
+    build_ios_app(
+    			    	scheme: "AUTMedia",
+    		    		export_method:"#{export_method}",
+                configuration: "#{build_configuration}",
+                		clean: true,
+    		    		output_directory: "./output/#{export_method}/V#{version_number}-#{build_number}",
+    		    		output_name: "AUTMedia_#{version_number}-#{build_number}",
+    		            workspace: "AUTMedia.xcworkspace",
+    		            include_symbols: false,
+    		            silent: false,
+    		            export_xcargs: "-allowProvisioningUpdates",
+    		            export_options: {
+    	                provisioningProfiles: {
+    	                    "com.autel.media" => "media_#{last_profile_component}"
+    	                }
+    	            }
+              )
+   end
+
+
+end
