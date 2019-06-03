@@ -6,8 +6,8 @@
 
 ------------------------
 
-4. 网络（蓝牙/ tcp / UDP /http / post / get / socket /websocket /ftp）
-5. 自动编译（git、fastlane、xcodebuild、genkins、cmake）
+4. 自动编译（git、fastlane、xcodebuild、genkins、cmake）
+5. 网络（蓝牙/ tcp / UDP /http / post / get / socket /websocket /ftp）
 6. 数据库 （fmdb、coredata）
 7. 内购买 （支付、退款、财务）、微信、支付宝
 8. MFI （原理、流程）
