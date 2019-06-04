@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Effective Objective-C Notes：GCD 实现同步锁 · GitBook</title>
+        <title>关于iOS多线程，你看我就够了 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="KVC.html" />
+    <link rel="next" href="Lock.html" />
     
-    
-    <link rel="prev" href="Multithreading_Thread.html" />
     
 
     </head>
@@ -178,7 +176,7 @@
                 <span>
             
                     
-                    mynote
+                    0-MJ-底层原理
             
                 </span>
             
@@ -187,425 +185,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../mynote/18年6月笔记概要.html">
-            
-                <a href="../mynote/18年6月笔记概要.html">
-            
-                    
-                    ## 专题三：  数据安全
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../mynote/18年5月笔记概要.html">
-            
-                <a href="../mynote/18年5月笔记概要.html">
-            
-                    
-                    ## 专题一： 代码管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" >
-            
-                <span>
-            
-                    
-                    Mynote
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.4.1" data-path="../Mynote/17年03月笔记概要.html">
-            
-                <a href="../Mynote/17年03月笔记概要.html">
-            
-                    
-                    17年03月笔记概要
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.2" data-path="../Mynote/16年11月笔记概要.html">
-            
-                <a href="../Mynote/16年11月笔记概要.html">
-            
-                    
-                    16年11月笔记概要
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../Mynote/17年01月笔记概要.html">
-            
-                <a href="../Mynote/17年01月笔记概要.html">
-            
-                    
-                    17年01月笔记概要
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.4" data-path="../Mynote/16年12月笔记概要.html">
-            
-                <a href="../Mynote/16年12月笔记概要.html">
-            
-                    
-                    16年12月笔记概要
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.5" data-path="../Mynote/知识体系一览.html">
-            
-                <a href="../Mynote/知识体系一览.html">
-            
-                    
-                    知识体系一览
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.6" data-path="../Mynote/17年02月笔记概要.html">
-            
-                <a href="../Mynote/17年02月笔记概要.html">
-            
-                    
-                    17年02月笔记概要
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" >
-            
-                <span>
-            
-                    
-                    unblock
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.5.1" data-path="../unblock/shadowSocks.html">
-            
-                <a href="../unblock/shadowSocks.html">
-            
-                    
-                    shadowsocks
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.6" >
-            
-                <span>
-            
-                    
-                    Makedown
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.6.1" data-path="../Makedown/makedown.html">
-            
-                <a href="../Makedown/makedown.html">
-            
-                    
-                    makedown使用
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7" >
-            
-                <span>
-            
-                    
-                    terminal
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.7.1" data-path="../terminal/terminal.html">
-            
-                <a href="../terminal/terminal.html">
-            
-                    
-                    终端使用初级
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.8" >
-            
-                <span>
-            
-                    
-                    xcode
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.8.1" data-path="../xcode/xcode.html">
-            
-                <a href="../xcode/xcode.html">
-            
-                    
-                    Xcode中常用的快捷键操作
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9" >
-            
-                <span>
-            
-                    
-                    0-MJ-数据结构
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.9.1" data-path="../0-MJ-数据结构/eclipse.html">
-            
-                <a href="../0-MJ-数据结构/eclipse.html">
-            
-                    
-                    ## eclips自动补全
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10" data-path="../0-job.html">
-            
-                <a href="../0-job.html">
-            
-                    
-                    集中力量
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.11" >
-            
-                <span>
-            
-                    
-                    brew
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.11.1" data-path="../brew/brew.html">
-            
-                <a href="../brew/brew.html">
-            
-                    
-                    brew
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12" >
-            
-                <span>
-            
-                    
-                    docker
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.12.1" data-path="../docker/wordpress.html">
-            
-                <a href="../docker/wordpress.html">
-            
-                    
-                    wordpress
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.2" data-path="../docker/gitlab.html">
-            
-                <a href="../docker/gitlab.html">
-            
-                    
-                    gitlab
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.12.3" data-path="../docker/docker.html">
-            
-                <a href="../docker/docker.html">
-            
-                    
-                    docker
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13" >
-            
-                <span>
-            
-                    
-                    iOS
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.13.1" data-path="NetWork.html">
-            
-                <a href="NetWork.html">
-            
-                    
-                    NetWork
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.2" data-path="Multithreading_Thread.html">
+        <li class="chapter active" data-level="1.3.1" data-path="Multithreading_Thread.html">
             
                 <a href="Multithreading_Thread.html">
             
@@ -618,7 +198,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.3" data-path="Lock.html">
+        <li class="chapter " data-level="1.3.2" data-path="Lock.html">
             
                 <a href="Lock.html">
             
@@ -631,7 +211,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.4" data-path="KVC.html">
+        <li class="chapter " data-level="1.3.3" data-path="KVC.html">
             
                 <a href="KVC.html">
             
@@ -644,72 +224,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.5" data-path="UnitTest.html">
-            
-                <a href="UnitTest.html">
-            
-                    
-                    测试
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.6" data-path="动画：UIView.html">
-            
-                <a href="动画：UIView.html">
-            
-                    
-                    iOS动画篇：UIView动画
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.7" data-path="富文本.html">
-            
-                <a href="富文本.html">
-            
-                    
-                    富文本
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.8" data-path="文件传输.html">
-            
-                <a href="文件传输.html">
-            
-                    
-                    项目分析之文件传输
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.9" data-path="CALayer.html">
-            
-                <a href="CALayer.html">
-            
-                    
-                    ## UIView
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.10" data-path="leak.html">
+        <li class="chapter " data-level="1.3.4" data-path="leak.html">
             
                 <a href="leak.html">
             
@@ -722,33 +237,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.11" data-path="AppDownLoadAddress.html">
-            
-                <a href="AppDownLoadAddress.html">
-            
-                    
-                    AppDownLoadAddress
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.12" data-path="性能优化.html">
-            
-                <a href="性能优化.html">
-            
-                    
-                    iOS性能优化
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.13" data-path="Multithreading_NSOperation.html">
+        <li class="chapter " data-level="1.3.5" data-path="Multithreading_NSOperation.html">
             
                 <a href="Multithreading_NSOperation.html">
             
@@ -761,20 +250,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.14" data-path="面试问答.html">
-            
-                <a href="面试问答.html">
-            
-                    
-                    面试问答
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.15" data-path="runtime使用场景.html">
+        <li class="chapter " data-level="1.3.6" data-path="runtime使用场景.html">
             
                 <a href="runtime使用场景.html">
             
@@ -787,7 +263,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.16" data-path="runLoop入门.html">
+        <li class="chapter " data-level="1.3.7" data-path="runLoop入门.html">
             
                 <a href="runLoop入门.html">
             
@@ -800,72 +276,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.17" data-path="Core Graphic.html">
-            
-                <a href="Core Graphic.html">
-            
-                    
-                    Core Graphic
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.18" data-path="blueTooth.html">
-            
-                <a href="blueTooth.html">
-            
-                    
-                    blueTooth
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.19" data-path="InteractWithWebView.html">
-            
-                <a href="InteractWithWebView.html">
-            
-                    
-                    InteractWithWebView
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.20" data-path="WebSocket.html">
-            
-                <a href="WebSocket.html">
-            
-                    
-                    webSocket
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.21" data-path="SQLCipher.html">
-            
-                <a href="SQLCipher.html">
-            
-                    
-                    - https://www.jianshu.com/p/66e15b4bb8d6
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.22" data-path="Multithreading_GCD.html">
+        <li class="chapter " data-level="1.3.8" data-path="Multithreading_GCD.html">
             
                 <a href="Multithreading_GCD.html">
             
@@ -878,46 +289,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.23" data-path="缓存机制.html">
-            
-                <a href="缓存机制.html">
-            
-                    
-                    缓存机制
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.24" data-path="Responder.html">
-            
-                <a href="Responder.html">
-            
-                    
-                    响应者链
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.25" data-path="CacheOfWebView.html">
-            
-                <a href="CacheOfWebView.html">
-            
-                    
-                    webview清除缓存
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.26" data-path="runtime相关术语.html">
+        <li class="chapter " data-level="1.3.9" data-path="runtime相关术语.html">
             
                 <a href="runtime相关术语.html">
             
@@ -930,91 +302,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.27" >
-            
-                <span>
-            
-                    
-                    construct
-            
-                </span>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.13.27.1" data-path="construct/框架搭建.html">
-            
-                <a href="construct/框架搭建.html">
-            
-                    
-                    框架搭建
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.27.2" data-path="construct/multiProject.html">
-            
-                <a href="construct/multiProject.html">
-            
-                    
-                    多项目共用代码
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.27.3" data-path="construct/架构和设计模式.html">
-            
-                <a href="construct/架构和设计模式.html">
-            
-                    
-                    * 讲讲 MVC、MVVM、MVP，以及你在项目里具体是怎么写的？
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.28" data-path="设计模式.html">
-            
-                <a href="设计模式.html">
-            
-                    
-                    设计模式六大原则：
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.29" data-path="security.html">
-            
-                <a href="security.html">
-            
-                    
-                    security
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.13.30" data-path="mutithreading.html">
+        <li class="chapter " data-level="1.3.10" data-path="mutithreading.html">
             
                 <a href="mutithreading.html">
             
@@ -1032,7 +320,742 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    mynote
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../mynote/18年6月笔记概要.html">
+            
+                <a href="../mynote/18年6月笔记概要.html">
+            
+                    
+                    ## 专题三：  数据安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../mynote/18年5月笔记概要.html">
+            
+                <a href="../mynote/18年5月笔记概要.html">
+            
+                    
+                    ## 专题一： 代码管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Mynote
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Mynote/17年03月笔记概要.html">
+            
+                <a href="../Mynote/17年03月笔记概要.html">
+            
+                    
+                    17年03月笔记概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Mynote/16年11月笔记概要.html">
+            
+                <a href="../Mynote/16年11月笔记概要.html">
+            
+                    
+                    16年11月笔记概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Mynote/17年01月笔记概要.html">
+            
+                <a href="../Mynote/17年01月笔记概要.html">
+            
+                    
+                    17年01月笔记概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Mynote/16年12月笔记概要.html">
+            
+                <a href="../Mynote/16年12月笔记概要.html">
+            
+                    
+                    16年12月笔记概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Mynote/知识体系一览.html">
+            
+                <a href="../Mynote/知识体系一览.html">
+            
+                    
+                    知识体系一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Mynote/17年02月笔记概要.html">
+            
+                <a href="../Mynote/17年02月笔记概要.html">
+            
+                    
+                    17年02月笔记概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    unblock
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../unblock/shadowSocks.html">
+            
+                <a href="../unblock/shadowSocks.html">
+            
+                    
+                    shadowsocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    2-网络相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../2-网络相关/NetWork.html">
+            
+                <a href="../2-网络相关/NetWork.html">
+            
+                    
+                    NetWork
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../2-网络相关/blueTooth.html">
+            
+                <a href="../2-网络相关/blueTooth.html">
+            
+                    
+                    blueTooth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../2-网络相关/WebSocket.html">
+            
+                <a href="../2-网络相关/WebSocket.html">
+            
+                    
+                    webSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    5-架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../5-架构/框架搭建.html">
+            
+                <a href="../5-架构/框架搭建.html">
+            
+                    
+                    框架搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../5-架构/multiProject.html">
+            
+                <a href="../5-架构/multiProject.html">
+            
+                    
+                    多项目共用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../5-架构/设计模式.html">
+            
+                <a href="../5-架构/设计模式.html">
+            
+                    
+                    设计模式六大原则：
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Makedown
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Makedown/makedown.html">
+            
+                <a href="../Makedown/makedown.html">
+            
+                    
+                    makedown使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    terminal
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../terminal/terminal.html">
+            
+                <a href="../terminal/terminal.html">
+            
+                    
+                    终端使用初级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    xcode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../xcode/xcode.html">
+            
+                <a href="../xcode/xcode.html">
+            
+                    
+                    Xcode中常用的快捷键操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    0-MJ-数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../0-MJ-数据结构/eclipse.html">
+            
+                <a href="../0-MJ-数据结构/eclipse.html">
+            
+                    
+                    ## eclips自动补全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0-job.html">
+            
+                <a href="../0-job.html">
+            
+                    
+                    集中力量
+            
+                </a>
+            
+
+            
+        </li>
+    
         <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    brew
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../brew/brew.html">
+            
+                <a href="../brew/brew.html">
+            
+                    
+                    brew
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../docker/wordpress.html">
+            
+                <a href="../docker/wordpress.html">
+            
+                    
+                    wordpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../docker/gitlab.html">
+            
+                <a href="../docker/gitlab.html">
+            
+                    
+                    gitlab
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../docker/docker.html">
+            
+                <a href="../docker/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../iOS/UnitTest.html">
+            
+                <a href="../iOS/UnitTest.html">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../iOS/动画：UIView.html">
+            
+                <a href="../iOS/动画：UIView.html">
+            
+                    
+                    iOS动画篇：UIView动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../iOS/富文本.html">
+            
+                <a href="../iOS/富文本.html">
+            
+                    
+                    富文本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../iOS/文件传输.html">
+            
+                <a href="../iOS/文件传输.html">
+            
+                    
+                    项目分析之文件传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../iOS/CALayer.html">
+            
+                <a href="../iOS/CALayer.html">
+            
+                    
+                    ## UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../iOS/AppDownLoadAddress.html">
+            
+                <a href="../iOS/AppDownLoadAddress.html">
+            
+                    
+                    AppDownLoadAddress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../iOS/性能优化.html">
+            
+                <a href="../iOS/性能优化.html">
+            
+                    
+                    iOS性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../iOS/面试问答.html">
+            
+                <a href="../iOS/面试问答.html">
+            
+                    
+                    面试问答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../iOS/Core Graphic.html">
+            
+                <a href="../iOS/Core Graphic.html">
+            
+                    
+                    Core Graphic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="../iOS/InteractWithWebView.html">
+            
+                <a href="../iOS/InteractWithWebView.html">
+            
+                    
+                    InteractWithWebView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="../iOS/SQLCipher.html">
+            
+                <a href="../iOS/SQLCipher.html">
+            
+                    
+                    - https://www.jianshu.com/p/66e15b4bb8d6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="../iOS/缓存机制.html">
+            
+                <a href="../iOS/缓存机制.html">
+            
+                    
+                    缓存机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="../iOS/Responder.html">
+            
+                <a href="../iOS/Responder.html">
+            
+                    
+                    响应者链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="../iOS/CacheOfWebView.html">
+            
+                <a href="../iOS/CacheOfWebView.html">
+            
+                    
+                    webview清除缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="../iOS/security.html">
+            
+                <a href="../iOS/security.html">
+            
+                    
+                    security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
             
                 <span>
             
@@ -1046,7 +1069,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1" >
+        <li class="chapter " data-level="1.17.1" >
             
                 <span>
             
@@ -1060,7 +1083,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.14.1.1" data-path="../3-数据存储/sql/数据库练习题目.html">
+        <li class="chapter " data-level="1.17.1.1" data-path="../3-数据存储/sql/数据库练习题目.html">
             
                 <a href="../3-数据存储/sql/数据库练习题目.html">
             
@@ -1083,7 +1106,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" >
+        <li class="chapter " data-level="1.18" >
             
                 <span>
             
@@ -1097,7 +1120,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="../atom/atom.html">
+        <li class="chapter " data-level="1.18.1" data-path="../atom/atom.html">
             
                 <a href="../atom/atom.html">
             
@@ -1115,7 +1138,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.16" >
+        <li class="chapter " data-level="1.19" >
             
                 <span>
             
@@ -1129,7 +1152,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.16.1" data-path="../regex/Regex.html">
+        <li class="chapter " data-level="1.19.1" data-path="../regex/Regex.html">
             
                 <a href="../regex/Regex.html">
             
@@ -1147,7 +1170,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17" >
+        <li class="chapter " data-level="1.20" >
             
                 <span>
             
@@ -1161,7 +1184,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.17.1" >
+        <li class="chapter " data-level="1.20.1" >
             
                 <span>
             
@@ -1174,7 +1197,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.2" >
+        <li class="chapter " data-level="1.20.2" >
             
                 <span>
             
@@ -1187,7 +1210,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.17.3" data-path="../C/arithmeticBook/readme.html">
+        <li class="chapter " data-level="1.20.3" data-path="../C/arithmeticBook/readme.html">
             
                 <a href="../C/arithmeticBook/readme.html">
             
@@ -1205,7 +1228,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18" >
+        <li class="chapter " data-level="1.21" >
             
                 <span>
             
@@ -1219,7 +1242,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.18.1" >
+        <li class="chapter " data-level="1.21.1" >
             
                 <span>
             
@@ -1233,7 +1256,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.18.1.1" data-path="../1-自动化编译/fastlane/fastlane.html">
+        <li class="chapter " data-level="1.21.1.1" data-path="../1-自动化编译/fastlane/fastlane.html">
             
                 <a href="../1-自动化编译/fastlane/fastlane.html">
             
@@ -1251,7 +1274,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.2" >
+        <li class="chapter " data-level="1.21.2" >
             
                 <span>
             
@@ -1265,7 +1288,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.18.2.1" data-path="../1-自动化编译/CI/Travis.html">
+        <li class="chapter " data-level="1.21.2.1" data-path="../1-自动化编译/CI/Travis.html">
             
                 <a href="../1-自动化编译/CI/Travis.html">
             
@@ -1283,7 +1306,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.3" >
+        <li class="chapter " data-level="1.21.3" >
             
                 <span>
             
@@ -1296,7 +1319,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.4" >
+        <li class="chapter " data-level="1.21.4" >
             
                 <span>
             
@@ -1310,7 +1333,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.18.4.1" data-path="../1-自动化编译/MV500编译/性能优化.html">
+        <li class="chapter " data-level="1.21.4.1" data-path="../1-自动化编译/MV500编译/性能优化.html">
             
                 <a href="../1-自动化编译/MV500编译/性能优化.html">
             
@@ -1323,7 +1346,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.4.2" data-path="../1-自动化编译/MV500编译/mediastream编译.html">
+        <li class="chapter " data-level="1.21.4.2" data-path="../1-自动化编译/MV500编译/mediastream编译.html">
             
                 <a href="../1-自动化编译/MV500编译/mediastream编译.html">
             
@@ -1341,7 +1364,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5" >
+        <li class="chapter " data-level="1.21.5" >
             
                 <span>
             
@@ -1355,7 +1378,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.18.5.1" data-path="../1-自动化编译/git/gitbook.html">
+        <li class="chapter " data-level="1.21.5.1" data-path="../1-自动化编译/git/gitbook.html">
             
                 <a href="../1-自动化编译/git/gitbook.html">
             
@@ -1368,7 +1391,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.2" data-path="../1-自动化编译/git/gitpages.html">
+        <li class="chapter " data-level="1.21.5.2" data-path="../1-自动化编译/git/gitpages.html">
             
                 <a href="../1-自动化编译/git/gitpages.html">
             
@@ -1381,7 +1404,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.3" data-path="../1-自动化编译/git/git_fork.html">
+        <li class="chapter " data-level="1.21.5.3" data-path="../1-自动化编译/git/git_fork.html">
             
                 <a href="../1-自动化编译/git/git_fork.html">
             
@@ -1394,7 +1417,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.4" data-path="../1-自动化编译/git/git_basic.html">
+        <li class="chapter " data-level="1.21.5.4" data-path="../1-自动化编译/git/git_basic.html">
             
                 <a href="../1-自动化编译/git/git_basic.html">
             
@@ -1407,7 +1430,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.5" data-path="../1-自动化编译/git/git_server.html">
+        <li class="chapter " data-level="1.21.5.5" data-path="../1-自动化编译/git/git_server.html">
             
                 <a href="../1-自动化编译/git/git_server.html">
             
@@ -1420,7 +1443,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.6" data-path="../1-自动化编译/git/gitlab.html">
+        <li class="chapter " data-level="1.21.5.6" data-path="../1-自动化编译/git/gitlab.html">
             
                 <a href="../1-自动化编译/git/gitlab.html">
             
@@ -1433,7 +1456,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.18.5.7" >
+        <li class="chapter " data-level="1.21.5.7" >
             
                 <span>
             
@@ -1456,12 +1479,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../0-now.html">
+        <li class="chapter " data-level="1.22" data-path="../0-now.html">
             
                 <a href="../0-now.html">
             
                     
-                    ## 周一 0603
+                    ## 周二 0604
             
                 </a>
             
@@ -1499,7 +1522,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Effective Objective-C Notes：GCD 实现同步锁</a>
+        <a href=".." >关于iOS多线程，你看我就够了</a>
     </h1>
 </div>
 
@@ -1514,73 +1537,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="effective-objective-c-notes&#xFF1A;gcd-&#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x9501;">Effective Objective-C Notes&#xFF1A;GCD &#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x9501;</h1>
-<p><a href="https://www.zybuluo.com/MicroCai/note/64272" target="_blank">GCD &#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x9501;</a></p>
-<hr>
-<blockquote>
-<p>&#x5185;&#x7F6E;&#x7684;&#x540C;&#x6B65;&#x9501;</p>
-</blockquote>
-<p>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x4F1A;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x5BF9;&#x8C61;&#xFF0C;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9501;&#xFF0C;&#x5E76;&#x7B49;&#x5F85;&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x624D;&#x91CA;&#x653E;&#x9501;&#x3002;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x672C;&#x8EAB;&#x6CA1;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A; @synchronized(self) &#x9501;&#x7684;&#x5BF9;&#x8C61;&#x662F; self&#xFF0C;&#x9020;&#x6210;&#x5171;&#x7528;&#x6B64;&#x9501;&#x7684;&#x540C;&#x6B65;&#x5757;&#x963B;&#x585E;&#xFF0C;&#x964D;&#x4F4E;&#x6548;&#x7387;&#x3002;</p>
-<pre><code class="lang-objc"><span class="hljs-comment">// someString &#x5C5E;&#x6027;</span>
-<span class="hljs-comment">// &#x5F53; someString &#x5F00;&#x59CB;&#x8BFB;&#x65F6;&#xFF0C;&#x5BF9;&#x5176;&#x7684;&#x5199;&#x5165;&#x963B;&#x585E;&#xFF0C;&#x8FD9;&#x662F;&#x5408;&#x7406;&#x7684;&#xFF1B;</span>
-- (<span class="hljs-built_in">NSString</span> *)someString
-{
-    <span class="hljs-keyword">@synchronized</span>(<span class="hljs-keyword">self</span>) {
-        <span class="hljs-keyword">return</span> _someString;
-    }
-}
-- (<span class="hljs-built_in">NSString</span> *)setSomeString:(<span class="hljs-built_in">NSString</span> *)someString
-{
-    <span class="hljs-keyword">@synchronized</span>(<span class="hljs-keyword">self</span>) {
-        _someString = someString;
-    }
-}
-<span class="hljs-comment">//otherString &#x5C5E;&#x6027;</span>
-<span class="hljs-comment">// &#x5F53;&#x7EBF;&#x7A0B;&#x5728;&#x5BF9; someString &#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x65F6;&#xFF0C;&#x4E0E;&#x4E4B;&#x65E0;&#x5173;&#x7684; otherString &#x4E5F;&#x4F1A;&#x53D7;&#x5230;&#x5E72;&#x6270;&#x963B;&#x585E;&#xFF0C;&#x8FD9;&#x662F;&#x4E0D;&#x5408;&#x7406;&#x7684;&#xFF1B;</span>
-- (<span class="hljs-built_in">NSString</span> *)otherString
-{
-    <span class="hljs-keyword">@synchronized</span>(<span class="hljs-keyword">self</span>) {
-        <span class="hljs-keyword">return</span> _otherString;
-    }
-}
-- (<span class="hljs-built_in">NSString</span> *)setOtherString:(<span class="hljs-built_in">NSString</span> *)otherString
-{
-    <span class="hljs-keyword">@synchronized</span>(<span class="hljs-keyword">self</span>) {
-        _otherString = otherString;
-    }
-}
-</code></pre>
-<ul>
-<li>NSLock &#x5BF9;&#x8C61;</li>
-</ul>
-<p>&#x9012;&#x5F52;&#x8C03;&#x7528;&#x65F6;&#x5019;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x6B7B;&#x9501;</p>
-<pre><code class="lang-objc">_lock = [[<span class="hljs-built_in">NSLock</span> alloc] init];
-- (<span class="hljs-keyword">void</span>)synchronizedMethod
-{
-    [_lock lock];
-    <span class="hljs-comment">//safe code...</span>
-    [_lock unlock];
-}
-</code></pre>
-<ul>
-<li>&#x7528; GCD &#x5B9E;&#x73B0;&#x540C;&#x6B65;&#x673A;&#x5236;</li>
-</ul>
-<pre><code class="lang-objc">
-_syncQueue = dispatch_queue_create(<span class="hljs-string">&quot;com.effectiveObjectiveC.syncQueue&quot;</span>, <span class="hljs-literal">NULL</span>);
-- (<span class="hljs-built_in">NSString</span> *)someString
-{
-    __<span class="hljs-keyword">weak</span> <span class="hljs-built_in">NSString</span> *localSomeString;
-    <span class="hljs-built_in">dispatch_sync</span>(_syncQueue, ^{
-        localSomeString = _someString;
-    });
-    <span class="hljs-keyword">return</span> localSomeString;
-}
-- (<span class="hljs-keyword">void</span>)setSomeString:(<span class="hljs-built_in">NSString</span> *)someString
-{
-    <span class="hljs-built_in">dispatch_sync</span>(_syncQueue, ^{
-        _someString = someString;
-    });
-}
+                                <p><a href="https://www.jianshu.com/p/0b0d9b1f1f19" target="_blank">&#x5173;&#x4E8E;iOS&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F60;&#x770B;&#x6211;&#x5C31;&#x591F;&#x4E86;</a></p>
+<h3 id="thread">Thread</h3>
+<pre><code class="lang-objc">  <span class="hljs-comment">// &#x5148;&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x7C7B;&#xFF0C;&#x518D;&#x542F;&#x52A8;</span>
+  <span class="hljs-comment">// &#x521B;&#x5EFA;</span>
+  <span class="hljs-built_in">NSThread</span> *thread = [[<span class="hljs-built_in">NSThread</span> alloc] initWithTarget:<span class="hljs-keyword">self</span> selector:<span class="hljs-keyword">@selector</span>(run:) object:<span class="hljs-literal">nil</span>];
+  <span class="hljs-comment">// &#x542F;&#x52A8;</span>
+  [thread start];
+
+  <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5E76;&#x81EA;&#x52A8;&#x542F;&#x52A8;</span>
+  [<span class="hljs-built_in">NSThread</span> detachNewThreadSelector:<span class="hljs-keyword">@selector</span>(run:) toTarget:<span class="hljs-keyword">self</span> withObject:<span class="hljs-literal">nil</span>];
+
+
+  <span class="hljs-comment">//&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</span>
+
+  <span class="hljs-comment">//&#x53D6;&#x6D88;&#x7EBF;&#x7A0B;</span>
+  - (<span class="hljs-keyword">void</span>)cancel;
+  <span class="hljs-comment">//&#x542F;&#x52A8;&#x7EBF;&#x7A0B;</span>
+  - (<span class="hljs-keyword">void</span>)start;
+  <span class="hljs-comment">//&#x5224;&#x65AD;&#x67D0;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x7684;&#x5C5E;&#x6027;</span>
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isExecuting) <span class="hljs-built_in">BOOL</span> executing;
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isFinished) <span class="hljs-built_in">BOOL</span> finished;
+  <span class="hljs-keyword">@property</span> (<span class="hljs-keyword">readonly</span>, getter=isCancelled) <span class="hljs-built_in">BOOL</span> cancelled;
+  <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;&#x7EBF;&#x7A0B;&#x540D;&#x5B57;</span>
+  -(<span class="hljs-keyword">void</span>)setName:(<span class="hljs-built_in">NSString</span> \*)name;
+  -(<span class="hljs-built_in">NSString</span> \*)name;
+  <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;</span>
+  + (<span class="hljs-built_in">NSThread</span> \*)currentThread;
+  <span class="hljs-comment">//&#x83B7;&#x53D6;&#x4E3B;&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;</span>
+  + (<span class="hljs-built_in">NSThread</span> \*)mainThread;
+  <span class="hljs-comment">//&#x4F7F;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6682;&#x505C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#xFF0C;&#x6216;&#x8005;&#x6682;&#x505C;&#x5230;&#x67D0;&#x4E2A;&#x65F6;&#x523B;</span>
+  + (<span class="hljs-keyword">void</span>)sleepForTimeInterval:(<span class="hljs-built_in">NSTimeInterval</span>)time;
+  + (<span class="hljs-keyword">void</span>)sleepUntilDate:(<span class="hljs-built_in">NSDate</span> \*)date;
 </code></pre>
 
                                 
@@ -1609,12 +1597,8 @@ _syncQueue = dispatch_queue_create(<span class="hljs-string">&quot;com.effective
 
             
                 
-                <a href="Multithreading_Thread.html" class="navigation navigation-prev " aria-label="Previous page: 关于iOS多线程，你看我就够了">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="KVC.html" class="navigation navigation-next " aria-label="Next page: Key-Value Coding Programming Guide 翻译">
+                <a href="Lock.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Effective Objective-C Notes：GCD 实现同步锁">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1625,7 +1609,7 @@ _syncQueue = dispatch_queue_create(<span class="hljs-string">&quot;com.effective
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Effective Objective-C Notes：GCD 实现同步锁","level":"1.13.3","depth":2,"next":{"title":"Key-Value Coding Programming Guide 翻译","level":"1.13.4","depth":2,"path":"iOS/KVC.md","ref":"iOS/KVC.md","articles":[]},"previous":{"title":"关于iOS多线程，你看我就够了","level":"1.13.2","depth":2,"path":"iOS/Multithreading_Thread.md","ref":"iOS/Multithreading_Thread.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"iOS/Lock.md","mtime":"2019-06-03T12:22:51.120Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-03T12:23:42.033Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"关于iOS多线程，你看我就够了","level":"1.3.1","depth":2,"next":{"title":"Effective Objective-C Notes：GCD 实现同步锁","level":"1.3.2","depth":2,"path":"0-MJ-底层原理/Lock.md","ref":"0-MJ-底层原理/Lock.md","articles":[]},"previous":{"title":"0-MJ-底层原理","level":"1.3","depth":1,"ref":"","articles":[{"title":"关于iOS多线程，你看我就够了","level":"1.3.1","depth":2,"path":"0-MJ-底层原理/Multithreading_Thread.md","ref":"0-MJ-底层原理/Multithreading_Thread.md","articles":[]},{"title":"Effective Objective-C Notes：GCD 实现同步锁","level":"1.3.2","depth":2,"path":"0-MJ-底层原理/Lock.md","ref":"0-MJ-底层原理/Lock.md","articles":[]},{"title":"Key-Value Coding Programming Guide 翻译","level":"1.3.3","depth":2,"path":"0-MJ-底层原理/KVC.md","ref":"0-MJ-底层原理/KVC.md","articles":[]},{"title":"leak","level":"1.3.4","depth":2,"path":"0-MJ-底层原理/leak.md","ref":"0-MJ-底层原理/leak.md","articles":[]},{"title":"关于iOS多线程，你看我就够了","level":"1.3.5","depth":2,"path":"0-MJ-底层原理/Multithreading_NSOperation.md","ref":"0-MJ-底层原理/Multithreading_NSOperation.md","articles":[]},{"title":"# Runtime 使用场景","level":"1.3.6","depth":2,"path":"0-MJ-底层原理/runtime使用场景.md","ref":"0-MJ-底层原理/runtime使用场景.md","articles":[]},{"title":"RunLoop","level":"1.3.7","depth":2,"path":"0-MJ-底层原理/runLoop入门.md","ref":"0-MJ-底层原理/runLoop入门.md","articles":[]},{"title":"多线程","level":"1.3.8","depth":2,"path":"0-MJ-底层原理/Multithreading_GCD.md","ref":"0-MJ-底层原理/Multithreading_GCD.md","articles":[]},{"title":"## 可能碰到的iOS笔试面试题","level":"1.3.9","depth":2,"path":"0-MJ-底层原理/runtime相关术语.md","ref":"0-MJ-底层原理/runtime相关术语.md","articles":[]},{"title":"iOS多线程全套","level":"1.3.10","depth":2,"path":"0-MJ-底层原理/mutithreading.md","ref":"0-MJ-底层原理/mutithreading.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"0-MJ-底层原理/Multithreading_Thread.md","mtime":"2019-06-04T03:08:17.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T03:09:16.879Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
