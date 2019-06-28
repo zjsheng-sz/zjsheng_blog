@@ -1,13 +1,11 @@
 
+### 周三 0605
+* 支付： pay.md
+* swift:
+
 ### 周二 0604
 
 * NetWork.md
-* blueTooth.md
-* WebSocket.md
-
-* 视频流调试
-* MaxiAP200 问题重现
-
 
 ### 周一 0603
 

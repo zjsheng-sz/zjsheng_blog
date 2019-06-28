@@ -57,6 +57,7 @@
     * [## 专题一： 代码管理](/Mynote/18年5月笔记概要.md)
     * [知识体系一览](/Mynote/知识体系一览.md)
 * 4-支付
+    * [## 内购买](/4-支付/pay.md)
 * swift
     * [Swift学习笔记 -Initialization](/swift/Initialization.md)
     * [Swift学习笔记 -Mix and Match Overview](/swift/MixAndMatchOverview.md)
@@ -95,7 +96,7 @@
         * [gitlab](/1-自动化编译/git/gitlab.md)
         * [ssh 方式搭建git服务](/1-自动化编译/git/git_server.md)
 * 源码阅读
-* [## 周二 0604](/0-now.md)
+* [## 周三 0605](/0-now.md)
 * C
     * Tree
     * LeetCode
